@@ -1,0 +1,53 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('./fonts/GmarketSansTTFLight.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('./fonts/GmarketSansTTFMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('./fonts/GmarketSansTTFBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+:root {
+  --color-main: #FE531F;
+  --linear-gradient-orange: linear-gradient(90deg,rgba(254, 116, 31, 1) 0%, rgba(254, 88, 31, 1) 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #0d0d0d;
+}
+img {
+  vertical-align: bottom;
+}
+body {
+  font-family: 'GmarketSans', sans-serif;
+}
+html { font-size: 16px; }
+@media (max-width: 768px) {
+  html { font-size: 14px; }
+}
+@media (max-width: 480px) {
+  html { font-size: 12px; }
+}

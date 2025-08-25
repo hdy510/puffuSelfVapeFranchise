@@ -26,6 +26,8 @@
 :root {
   --color-main: #FE531F;
   --linear-gradient-orange: linear-gradient(90deg,rgba(254, 116, 31, 1) 0%, rgba(254, 88, 31, 1) 100%);
+  --title-font-size: 4rem;
+  --subTitle-font-size: 1.625rem;
 }
 * {
   margin: 0;
@@ -43,6 +45,7 @@ img {
 }
 body {
   font-family: 'GmarketSans', sans-serif;
+  color: #fff;
 }
 html { font-size: 16px; }
 @media (max-width: 768px) {

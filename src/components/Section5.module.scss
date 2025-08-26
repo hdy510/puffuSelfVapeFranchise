@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  background: #000;
+}
+.wrap {
+  max-width: 80rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10rem 2.813rem 2rem;
+}
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+  padding-bottom: 5rem;
+}
+.title {
+  font-size: var(--title-font-size);
+  font-weight: 700;
+}
+.orangeText {
+  color: var(--color-main);
+}
+.subTitle {
+  font-size: var(--subTitle-font-size);
+}
+.imgBox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  max-width: 52.5rem;
+  margin: 0 auto;
+  // background-color: gray;
+  height: 584px;
+  position: relative;
+}
+.lineUpImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modelingImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rightBox {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: fit-content;
+  padding-bottom: 5rem;
+  padding-right: 3rem;
+}
+.rightBoxEach {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.rightBoxEachTitle {
+  font-size: 2.125rem;
+  font-weight: 700;
+}
+.rightBoxEachContent {
+  font-size: 3.125rem;
+  font-weight: 700;
+  color: var(--color-main);
+}
+.swiperBox {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  max-width: 935px;
+  margin: 0 auto;
+}
+.brandList {
+  max-width: 935px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}

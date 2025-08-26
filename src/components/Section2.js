@@ -56,8 +56,8 @@ function Section2 () {
 
         <div className={styles.part3}>
           <div className={styles.titleBox}>
-            <h2 className={styles.title}>고마진 아이템과 무인 시스템 운영으로<br/>
-            <span className={styles.orangeText}>고마진 저관리</span> 창업 모델 실현</h2>
+            <h3 className={styles.title}>고마진 아이템과 무인 시스템 운영으로<br/>
+            <span className={styles.orangeText}>고마진 저관리</span> 창업 모델 실현</h3>
           </div>
           <div className={styles.arrowBox}>
             <div className={styles.arrowBoxSubBox}>

@@ -1,0 +1,92 @@
+.container {
+  width: 100%;
+  background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(27, 27, 32, 1) 100%);
+}
+.wrap {
+  max-width: 80rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10rem 2.813rem 10rem;
+}
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+  padding-bottom: 10rem;
+}
+.title {
+  font-size: var(--title-font-size);
+  font-weight: 700;
+}
+.orangeText {
+  color: var(--color-main);
+}
+.subTitle {
+  font-size: var(--subTitle-font-size);
+}
+
+.diagramBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+.diagramImgBox {
+  width: 300px;
+  height: 300px;
+  background-color: gray;
+  position: relative;
+}
+.diagramSubTxt {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.diagramTxtBox {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  &.index0 {
+    top: 0;
+    right: 100%;
+    align-items: flex-end;
+  }
+  &.index1 {
+    bottom: 100%;
+  }
+  &.index2 {
+    bottom: 100%;
+    left: 30%;
+  }
+  &.index3 {
+    bottom: 100%;
+    left: 80%;
+  }
+  &.index4 {
+    top: 40%;
+    left: 100%;
+  }
+}
+.diagramKeyBig {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.diagramValueBig {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--color-main);
+  white-space: nowrap;
+}
+.bigTxt {
+  font-size: 6rem;
+}
+.diagramKey {
+  font-size: 1.375rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.diagramValue {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #aaa;
+}

@@ -1,0 +1,59 @@
+.container {
+  width: 100%;
+  background: linear-gradient(180deg,rgba(16, 17, 23, 1) 0%, rgba(37, 37, 39, 1) 100%);
+}
+.wrap {
+  max-width: 80rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10rem 2.813rem 10rem;
+}
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+  padding-bottom: 5rem;
+}
+.title {
+  font-size: var(--title-font-size);
+  font-weight: 700;
+}
+.titleSeconRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+.titleSeconRowTxt {
+  font-size: var(--title-font-size);
+  font-weight: 700;
+}
+.meritsBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+}
+.meritsEach {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  background-color: #282A30;
+}
+.meritsId {
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: var(--color-main);
+  padding: 0.4rem 0.8rem;
+  border-radius: 100px;
+  width: fit-content;
+}
+.meritsTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+.meritsSubTitle {
+  font-size: 1.125rem;
+}

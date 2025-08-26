@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  background: linear-gradient(180deg,rgba(16, 17, 23, 1) 0%, rgba(37, 37, 39, 1) 100%);
+}
+.wrap {
+  max-width: 80rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10rem 2.813rem 2rem;
+}
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+}
+.title {
+  font-size: var(--title-font-size);
+  font-weight: 700;
+}
+.orangeText {
+  color: var(--color-main);
+}
+.worryBox {
+  background-color: gray;
+  height: 500px;
+  margin-top: 5rem;
+  position: relative;
+}
+.worryEach {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}

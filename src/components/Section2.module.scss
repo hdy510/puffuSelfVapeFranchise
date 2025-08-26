@@ -19,12 +19,18 @@
 .title {
   font-size: var(--title-font-size);
   font-weight: 700;
+  &.heading1 {
+    font-size: 4rem;
+  }
 }
 .orangeText {
   color: var(--color-main);
 }
 .subTitle {
   font-size: var(--subTitle-font-size);
+  &.heading1Sub {
+    font-size: 1.625rem;
+  }
 }
 
 .cardBox {

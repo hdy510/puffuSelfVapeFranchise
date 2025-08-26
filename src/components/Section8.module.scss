@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(27, 27, 32, 1) 100%);
+}
+.wrap {
+  max-width: 80rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10rem 2.813rem 10rem;
+}
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.375rem;
+  padding-bottom: 5rem;
+}
+.title {
+  font-size: var(--title-font-size);
+  font-weight: 700;
+}
+.orangeText {
+  color: var(--color-main);
+}
+.subTitle {
+  font-size: var(--subTitle-font-size);
+}
+
+.swiper-slide {
+  background-color: yellow;
+}
+.swiperBox {
+}
+.slideInnerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.storeName {
+  font-size: 1.688rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-main);
+  border-radius: 100px;
+  width: fit-content;
+}
+.slideImgBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.slideImgEach {
+  cursor: pointer;
+}

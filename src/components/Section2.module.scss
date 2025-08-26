@@ -1,13 +1,12 @@
 .container {
   width: 100%;
-  height: 3000px;
   background: linear-gradient(180deg,rgba(37, 37, 39, 1) 0%, rgba(16, 17, 23, 1) 100%);
 }
 .wrap {
   max-width: 80rem;
   height: 100%;
   margin: 0 auto;
-  padding: 10rem 2.813rem;
+  padding: 10rem 2.813rem 0;
 }
 .part1, .part2 {
   padding-bottom: 10rem;
@@ -26,4 +25,134 @@
 }
 .subTitle {
   font-size: var(--subTitle-font-size);
+}
+
+.cardBox {
+  padding: 7rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.leftBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+  align-items: center;
+}
+.rightBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+  align-items: center;
+}
+.cardBoxTitle {
+  font-size: 1.35rem;
+  background-color: #373741;
+  border-radius: 100px;
+  width: fit-content;
+  padding: 1rem 2rem 0.9rem 2rem;
+  font-weight: 700;
+}
+.cardBoxImage {
+  background-color: #373741;
+  border-radius: 0.875rem;
+  width: 25.875rem;
+  height: 21.625rem;
+}
+.cardBoxReference {
+  font-size: 1rem;
+  color: var(--color-gray-bright);
+  font-weight: 500;
+  text-align: center;
+}
+.centerBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.centerBoxTxt {
+  text-align: center;
+  font-size: 1.563rem;
+  &.last {
+    font-weight: 700;
+    font-size: 3.125rem;
+    padding-top: 10px;
+  }
+}
+.centerBoxReference {
+  font-size: 1.125rem;
+  color: var(--color-gray-bright);
+  font-weight: 500;
+  text-align: center;
+  padding-top: 1rem;
+}
+.bigTxt {
+  font-weight: 700;
+  font-size: 3.125rem;
+}
+.biggestTxt {
+  font-size: 4.75rem;
+  background-color: var(--color-main);
+  padding: 10px 10px 0 10px;
+}
+.circleBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  padding: 6rem 0;
+}
+.leftCircleBoxWrap {
+  width: 300px;
+  height: 300px;
+  background-color: gray;
+  position: relative;
+}
+.leftCircleBoxNum {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.375rem;
+  font-weight: 700;
+}
+.rightCircleBoxWrap {
+  width: 300px;
+  height: 300px;
+  background-color: gray;
+  position: relative;
+}
+.rightCircleBoxNum {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.625rem;
+  font-weight: 700;
+}
+.circleBoxLable {
+  font-size: 1.5rem;
+  color: var(--color-gray-bright);
+  padding-top: 2rem;
+  text-align: center;
+}
+.arrowBox {
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.arrowBoxSubBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.arrowBoxWhiteTxt {
+  font-size: 2.875rem;
+  font-weight: 700;
+}
+.arrowBoxWhiteGradientTxt {
+  font-size: 2.875rem;
+  font-weight: 700;
 }

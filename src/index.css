@@ -25,6 +25,7 @@
 
 :root {
   --color-main: #FE531F;
+  --color-gray-bright: #9EA4A6;
   --linear-gradient-orange: linear-gradient(90deg,rgba(254, 116, 31, 1) 0%, rgba(254, 88, 31, 1) 100%);
   --title-font-size: 4rem;
   --subTitle-font-size: 1.625rem;

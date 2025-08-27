@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import styles from "./Section13.module.scss";
 import procedure01 from "../resources/procedure01.png";
 import procedure02 from "../resources/procedure02.png";
@@ -8,7 +9,7 @@ import procedure06 from "../resources/procedure06.png";
 import rightWhiteDoubleArrow from "../resources/rightWhiteDoubleArrow.png";
 
 
-function Section13 () {
+const Section13 = forwardRef((props, ref) => {
   const procedureList = [
     { title: "1번 가맹상담", img: procedure01 },
     { title: "2번 상권분석", img: procedure02 },
@@ -19,7 +20,7 @@ function Section13 () {
   ]
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={ref}>
       <div className={styles.wrap}>
         <div className={styles.titleBox}>
           <h2 className={styles.title}>
@@ -41,6 +42,6 @@ function Section13 () {
       </div>
     </div>
   )
-}
+})
 
 export default Section13;

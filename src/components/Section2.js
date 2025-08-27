@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import styles from "./Section2.module.scss";
 
-function Section2 () {
+const Section2 = forwardRef((props, ref) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={ref}>
       <div className={styles.wrap}>
         <div className={styles.part1}>
           <div className={styles.titleBox}>
@@ -75,6 +76,6 @@ function Section2 () {
       </div>
     </div>
   );
-}
+})
 
 export default Section2;

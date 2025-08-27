@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import styles from "./Section10.module.scss";
 import packageBasic from "../resources/packageBasic.png";
 import packageAllInOne from "../resources/packageAllInOne.png";
@@ -5,7 +6,7 @@ import orangeLine from "../resources/orangeLine.png";
 import puffuWhite from "../resources/puffuWhite.png";
 
 
-function Section10 () {
+const Section10 = forwardRef((props, ref) => {
   const serviceCostList = [
     { service: "무인세탁소", startUpCost: "4,500만원", maintenanceCost: "400만원" },
     { service: "무인골프장", startUpCost: "34,412만원", maintenanceCost: "1,100만원" },
@@ -14,7 +15,7 @@ function Section10 () {
   ]
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={ref}>
       <div className={styles.wrap}>
         <div className={styles.titleBox}>
           <h2 className={styles.title}>
@@ -107,6 +108,6 @@ function Section10 () {
       </div>
     </div>
   )
-}
+})
 
 export default Section10;

@@ -1,9 +1,10 @@
+import { forwardRef } from "react";
 import styles from "./Section14.module.scss";
 import puffuCircle from "../resources/puffuCircle.png";
 
-function Section14() {
+const Section14 = forwardRef((props, ref) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={ref}>
       <div className={styles.wrap}>
         <div className={styles.titleBox}>
           <h2 className={styles.title}>창업문의</h2>
@@ -83,6 +84,6 @@ function Section14() {
       </div>
     </div>
   );
-}
+})
 
 export default Section14;

@@ -78,7 +78,7 @@ const Section2 = forwardRef((props, ref) => {
               <span className={styles.arrowBoxWhiteGradientTxt}>관리 용이</span>
             </div>
             <div className={styles.arrowBoxSubBox}>
-              <span className={styles.arrowBoxWhiteTxt}>무인 시스템</span>
+              <span className={styles.arrowBoxWhiteTxt}>고마진 아이템</span>
               <div className={styles.arrowBundle}>
                 <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />
                 <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />

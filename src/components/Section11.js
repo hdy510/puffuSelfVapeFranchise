@@ -1,4 +1,10 @@
 import styles from "./Section11.module.scss";
+import smile from "../resources/smile.png";
+import chart1 from "../resources/chart1.png";
+import chart2 from "../resources/chart2.png";
+import chart3 from "../resources/chart3.png";
+import chart4 from "../resources/chart4.png";
+import chart5 from "../resources/chart5.png";
 
 
 function Section11 () {
@@ -14,7 +20,15 @@ function Section11 () {
           </p>
         </div>
         <div className={styles.diagramBox}>
+          <img src={smile} alt="도너츠 차트 - 순수익" className={styles.smile} />
           <div className={styles.diagramImgBox}>
+            <img src={chart1} alt="도너츠 차트 - 순수익" className={styles.chart1} />
+            <img src={chart2} alt="도너츠 차트 - 순수익" className={styles.chart2} />
+            <img src={chart3} alt="도너츠 차트 - 순수익" className={styles.chart3} />
+            <img src={chart4} alt="도너츠 차트 - 순수익" className={styles.chart4} />
+            <img src={chart5} alt="도너츠 차트 - 순수익" className={styles.chart5} />
+          </div>
+          <div className={styles.diagramTxtBoxWrap}>
             <div className={`${styles.diagramTxtBox} ${styles.index0}`}>
               <p className={styles.diagramKeyBig}>순수익</p>
               <p className={styles.diagramValueBig}>약 <span className={styles.bigTxt}>34%</span></p>

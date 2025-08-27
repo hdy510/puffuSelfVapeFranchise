@@ -23,6 +23,9 @@
 .orangeText {
   color: var(--color-main);
   font-size: 4.2rem;
+  background: var(--linear-gradient-orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .subTitle {
   font-size: var(--subTitle-font-size);
@@ -30,4 +33,7 @@
 .subOrangeText {
   color: var(--color-main);
   font-size: 2rem;
+  background: var(--linear-gradient-orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

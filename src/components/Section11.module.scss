@@ -78,6 +78,9 @@
   font-weight: 700;
   color: var(--color-main);
   white-space: nowrap;
+  background: var(--linear-gradient-orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .bigTxt {
   font-size: 6rem;

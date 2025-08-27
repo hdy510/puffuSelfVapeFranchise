@@ -1,5 +1,8 @@
 import { forwardRef } from "react";
 import styles from "./Section2.module.scss";
+import circleGray from "../resources/circleGray.png";
+import circleOrange from "../resources/circleOrange.png";
+import rightGrayArrow from "../resources/rightGrayArrow.png";
 
 const Section2 = forwardRef((props, ref) => {
   return (
@@ -40,14 +43,16 @@ const Section2 = forwardRef((props, ref) => {
           <div className={styles.circleBox}>
             <div className={styles.leftCircleBox}>
               <div className={styles.leftCircleBoxWrap}>
-                <img alt="일반 소매업 평균은 1.5배 마진" />
+                <img src={circleGray} alt="일반 소매업 평균은 1.5배 마진" />
                 <span className={styles.leftCircleBoxNum}>1.5배</span>
               </div>
               <p className={styles.circleBoxLable}>일반 소매업 평균</p>
             </div>
             <div className={styles.rightCircleBox}>
               <div className={styles.rightCircleBoxWrap}>
-                <img alt="푸푸는 2.7배 마진" />
+                <img src={circleOrange} alt="푸푸는 2.7배 마진" className={styles.expandCircle2} />
+                <img src={circleOrange} alt="푸푸는 2.7배 마진" className={styles.expandCircle1} />
+                <img src={circleOrange} alt="푸푸는 2.7배 마진" />
                 <span className={styles.rightCircleBoxNum}>2.7배</span>
               </div>
               <p className={styles.circleBoxLable}>푸푸 전자담배</p>
@@ -63,13 +68,25 @@ const Section2 = forwardRef((props, ref) => {
           <div className={styles.arrowBox}>
             <div className={styles.arrowBoxSubBox}>
               <span className={styles.arrowBoxWhiteTxt}>무인 시스템</span>
-              <img alt="오른쪽 화살표 아이콘" />
+              <div className={styles.arrowBundle}>
+                <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />
+                <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />
+                <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />
+                <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />
+                <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />
+              </div>
               <span className={styles.arrowBoxWhiteGradientTxt}>관리 용이</span>
             </div>
             <div className={styles.arrowBoxSubBox}>
               <span className={styles.arrowBoxWhiteTxt}>무인 시스템</span>
-              <img alt="오른쪽 화살표 아이콘" />
-              <span className={styles.arrowBoxWhiteGradientTxt}>관리 용이</span>
+              <div className={styles.arrowBundle}>
+                <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />
+                <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />
+                <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />
+                <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />
+                <img src={rightGrayArrow} alt="오른쪽 화살표 아이콘" />
+              </div>
+              <span className={styles.arrowBoxWhiteGradientTxt}>높은 수익</span>
             </div>
           </div>
         </div>

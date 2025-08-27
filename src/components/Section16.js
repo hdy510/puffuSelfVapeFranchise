@@ -137,7 +137,7 @@ function Section16 () {
         </ul>
         <ul className={styles.listBox}>
           {faqData[tab].items.map((data, index) => (
-            <li className={styles.listEach} key={`faqItem_${tab}_${index}`}>
+            <li className={`${styles.listEach} ${index === faqData[tab].items.length - 1 ? styles.last : ""}`} key={`faqItem_${tab}_${index}`}>
               <div
                 className={styles.questionBox}
                 onClick={() => toggleAnswer(index)}

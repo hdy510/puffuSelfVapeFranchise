@@ -47,7 +47,9 @@
 .listEach {
   border-top: 1px solid rgba($color: #D9D9D9, $alpha: 0.4);
   padding: 0.8rem;
-  
+  &.last {
+    border-bottom: 1px solid rgba($color: #D9D9D9, $alpha: 0.4);
+  }
 }
 .questionBox {
    display: flex;
@@ -66,6 +68,7 @@
   }
 }
 .answerBox {
+  padding-bottom: 0.2rem;
   max-height: 0;
   opacity: 0;
   overflow: hidden;

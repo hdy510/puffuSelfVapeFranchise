@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  background-color: #0A0E12;
+}
+.wrap {
+  max-width: 80rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 3rem 2.813rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftTopBox {
+  display: flex;
+  gap: 3rem;
+  padding-bottom: 2rem;
+}
+
+.listEach {
+  color: #ccc;
+  padding-bottom: 0.7rem;
+}
+.label {
+  font-weight: 700;
+  color: #fff;
+  padding-right: 0.7rem;
+}
+.contact {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: right;
+}
+.phoneNumber {
+  color: var(--color-main);
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding-top: 0.3rem;
+}

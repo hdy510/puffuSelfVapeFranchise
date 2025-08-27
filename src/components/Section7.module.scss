@@ -116,6 +116,7 @@
 
 .kioskImgBox {
   position: relative;
+  width: 38.75rem;
   &:hover {
     .dimmed {
       opacity: 1;
@@ -124,10 +125,13 @@
       opacity: 1;
     }
   }
+  .kioskImg {
+    
+  }
   .dimmed {
     position: absolute;
     top: 50%;
-    left: 45.6%;
+    left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: all 0.5s;
@@ -135,7 +139,7 @@
   .kioskDemo {
     position: absolute;
     top: 50%;
-    left: 45.6%;
+    left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     cursor: pointer;
@@ -163,6 +167,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba($color: #000000, $alpha: 0.5);
+  backdrop-filter: blur(0.188rem);
+  -webkit-backdrop-filter: blur(0.188rem);
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;

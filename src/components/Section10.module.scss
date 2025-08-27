@@ -1,6 +1,7 @@
 .container {
   width: 100%;
-  background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(27, 27, 32, 1) 100%);
+  background-image: url("../resources/bgNightCity.png");
+  background-size: cover;
 }
 .wrap {
   max-width: 80rem;

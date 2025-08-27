@@ -40,7 +40,28 @@
   gap: 2rem;
   border-radius: 0.75rem;
   padding: 2rem;
-  background-color: #282A30;
+  // background-color: #282A30;
+  background-size: cover;
+  &.index0 {
+  background-image: url("../resources/bgMerit1.png");
+
+  }
+  &.index1 {
+  background-image: url("../resources/bgMerit2.png");
+
+  }
+  &.index2 {
+  background-image: url("../resources/bgMerit3.png");
+
+  }
+  &.index3 {
+  background-image: url("../resources/bgMerit4.png");
+
+  }
+  &.index4 {
+  background-image: url("../resources/bgMerit5.png");
+
+  }
 }
 .meritsId {
   font-size: 1rem;

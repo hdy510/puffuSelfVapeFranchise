@@ -1,6 +1,8 @@
 .container {
   width: 100%;
-  background-color: #2e2e2e;
+  background-image: url("../resources/bgQuestion.png");
+  background-size: cover;
+  background-position: center center;
 }
 .wrap {
   max-width: 80rem;

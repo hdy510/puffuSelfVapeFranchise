@@ -1,6 +1,9 @@
 .container {
   width: 100%;
-  background: #000;
+  // background: #000;
+  background-image: url("../resources/bgSpotlight.png");
+  background-size: cover;
+  background-position: center center;
 }
 .wrap {
   max-width: 80rem;

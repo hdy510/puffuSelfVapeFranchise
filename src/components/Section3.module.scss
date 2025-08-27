@@ -21,8 +21,8 @@
   color: var(--color-main);
 }
 .worryBox {
-  background-color: gray;
-  height: 500px;
+  // background-color: gray;
+  height: 34.375rem;
   margin-top: 5rem;
   position: relative;
 }
@@ -32,4 +32,39 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+}
+.worryBox li {
+  &:nth-child(1) {
+    top: 10%;
+    left: 4%;
+  }
+  &:nth-child(2) {
+    top: 0%;
+    left: 42%;
+  }
+  &:nth-child(3) {
+    right: 0%;
+    top: 25%;
+  }
+  &:nth-child(4) {
+    left: 2%;
+    bottom: 4%;
+  }
+  &:nth-child(5) {
+    left: 35%;
+    top: 42%;
+  }
+  &:nth-child(6) {
+    right: 10%;
+    bottom: 0%;
+  }
+}
+.worryTxt {
+  padding-left: 0.313rem;
+  &:hover {
+    
+  }
+}
+@keyframes bounce {
+  
 }

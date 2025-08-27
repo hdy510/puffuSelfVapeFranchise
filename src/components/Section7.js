@@ -160,8 +160,8 @@ function Section7 () {
         </div>
       </div>
 
-      <div className={`${styles.modalScreen} ${modalOpen ? styles.open : ""}`}>
-        <div className={`${styles.modalBox} ${modalOpen ? styles.open : ""}`}>
+      <div className={`${styles.modalScreen} ${modalOpen ? styles.open : ""}`} onClick={() => setModalOpen(false)}>
+        <div className={`${styles.modalBox} ${modalOpen ? styles.open : ""}`} onClick={(e) => e.stopPropagation()}>
           <img src={closeBtn} alt="닫기 버튼" className={styles.closeBtn}
             onClick={() => setModalOpen(false)}
           />

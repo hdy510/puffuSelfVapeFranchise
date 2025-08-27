@@ -152,3 +152,65 @@
     left: 0;
   }
 }
+
+
+
+.modalScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.modalBox {
+  width: fit-content;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.063rem solid #5E5E5E;
+  background: linear-gradient(180deg,rgba(53, 53, 53, 1) 0%, rgba(29, 29, 29, 1) 100%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem 4rem 2rem;
+  position: relative;
+  transition: all 0.3s;
+  &.open {
+    top: 50%;
+  }
+}
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.iconWrap {
+  display: flex;
+  gap: 0.5rem;
+}
+.modalTitle {
+  font-size: 1.813rem;
+  font-weight: 700;
+}
+.modalImgBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  img {
+    cursor: pointer;
+  }
+}

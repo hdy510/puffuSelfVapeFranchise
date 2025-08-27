@@ -3,6 +3,10 @@ import styles from "./Section2.module.scss";
 import circleGray from "../resources/circleGray.png";
 import circleOrange from "../resources/circleOrange.png";
 import rightGrayArrow from "../resources/rightGrayArrow.png";
+import coinIcon from "../resources/coinIcon.png";
+import shopIcon from "../resources/shopIcon.png";
+import marketGraph1 from "../resources/marketGraph1.png";
+import marketGraph2 from "../resources/marketGraph2.png";
 
 const Section2 = forwardRef((props, ref) => {
   return (
@@ -17,13 +21,23 @@ const Section2 = forwardRef((props, ref) => {
           </div>
           <div className={styles.cardBox}>
             <div className={styles.leftBox}>
-              <div className={styles.cardBoxTitle}>전자담배 시장 규모</div>
-              <div className={styles.cardBoxImage}>이미지 넣을 자리입니다</div>
+              <div className={styles.cardBoxTitle}>
+                <img src={coinIcon} alt="돈이 쌓여있는 아이콘" className={styles.coinIcon} />
+                <p>전자담배 시장 규모</p>
+              </div>
+              <div className={styles.cardBoxImage}>
+                <img src={marketGraph1} alt="2018년 96억원에서 2023년 353억원" />
+              </div>
               <p className={styles.cardBoxReference}>(출처: PSMarketResearch, <br/>Grand View Research)</p>
             </div>
             <div className={styles.rightBox}>
-              <div className={styles.cardBoxTitle}>무인매장 신규 가맹</div>
-              <div className={styles.cardBoxImage}>이미지 넣을 자리입니다</div>
+              <div className={styles.cardBoxTitle}>
+                <img src={shopIcon} alt="가게 아이콘" className={styles.shopIcon} />
+                <p>무인매장 신규 가맹</p>
+              </div>
+              <div className={styles.cardBoxImage}>
+                <img src={marketGraph2} alt="2019년에서 2023년 무려 894% 증가" />
+              </div>
               <p className={styles.cardBoxReference}>(출처: 신한카드 빅데이터연구소)</p>
             </div>
           </div>

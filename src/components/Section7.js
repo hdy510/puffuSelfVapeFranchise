@@ -12,6 +12,9 @@ import appCustomer2 from "../resources/appCustomer2.png";
 import appVendor from "../resources/appVendor.png";
 import downloadGooglePlay from "../resources/downloadGooglePlay.png";
 import downloadAppStore from "../resources/downloadAppStore.png";
+import downloadGalaxystore from "../resources/downloadGalaxystore.png";
+import downloadOnestore from "../resources/downloadOnestore.png";
+import closeBtn from "../resources/closeBtn.png";
 
 
 function Section7 () {
@@ -29,18 +32,20 @@ function Section7 () {
       rightBox: <div className={styles.smartPhoneImgBox}>
        <div className={styles.appBox}>
         <div className={styles.appTitleBox}>
-          <img src={appCustomer1} alt="고객용 앱 아이콘1" />
-          <img src={appCustomer2} alt="고객용 앱 아이콘1" />
+          <img src={appCustomer1} alt="고객용 앱 아이콘1" style={{ width: "57px" }} />
+          <img src={appCustomer2} alt="고객용 앱 아이콘1" style={{ width: "57px" }} />
           <p className={styles.appTitleTxt}>고객용 앱</p>
         </div>
         <div className={styles.appDownloadBox}>
-          <img src={downloadGooglePlay} alt="구글플레이에서 다운로드 버튼" className={styles.downloadLink}
+          <img src={downloadGooglePlay} alt="구글플레이에서 다운로드하기 버튼" className={styles.downloadLink}
             onClick={() => window.open("https://play.google.com/store/apps/details?id=com.androidpu.muinPu&hl=ko", "_blank")}
           />
-          <img src={downloadAppStore} alt="앱스토어에서 다운로드 버튼" className={styles.downloadLink}
+          <img src={downloadAppStore} alt="앱스토어에서 다운로드하기 버튼" className={styles.downloadLink}
             onClick={() => window.open("https://apps.apple.com/kr/app/puffu/id6504068927", "_blank")}
           />
-          <img src={moreCircleIcon} alt="더보기 버튼" className={styles.moreCircleIcon} />
+          <img src={moreCircleIcon} alt="더보기 버튼" className={styles.moreCircleIcon}
+            onClick={() => setModalOpen(true)}
+          />
         </div>
        </div>
        <div className={styles.appBox}>
@@ -49,7 +54,7 @@ function Section7 () {
             <p className={styles.appTitleTxt}>점주용 앱</p>
           </div>
           <div className={styles.appDownloadBox}>
-            <img src={downloadAppStore} alt="앱스토어에서 다운로드 버튼" className={styles.downloadLink}
+            <img src={downloadAppStore} alt="앱스토어에서 다운로드하기 버튼" className={styles.downloadLink}
               onClick={() => window.open("https://apps.apple.com/kr/app/puffu-%EC%82%AC%EC%9E%A5%EB%8B%98/id6749678115", "_blank")}
             />
           </div>
@@ -94,6 +99,10 @@ function Section7 () {
   ];
   const [ tab, setTab ] = useState("smartPhone");
   const activeTab = tabs.find((t) => t.key === tab);
+  const [ modalOpen, setModalOpen ] = useState(false);
+
+  
+
 
 
   function TabContent({ title, list, rightBox }) {
@@ -147,6 +156,33 @@ function Section7 () {
 
           <div className={styles.tabContentBox}>
             <TabContent title={activeTab.title} list={activeTab.list} rightBox={activeTab.rightBox} />
+          </div>
+        </div>
+      </div>
+
+      <div className={`${styles.modalScreen} ${modalOpen ? styles.open : ""}`}>
+        <div className={`${styles.modalBox} ${modalOpen ? styles.open : ""}`}>
+          <img src={closeBtn} alt="닫기 버튼" className={styles.closeBtn}
+            onClick={() => setModalOpen(false)}
+          />
+          <div className={styles.iconWrap}>
+            <img src={appCustomer1} alt="고객용 앱 아이콘" />
+            <img src={appCustomer2} alt="고객용 앱 아이콘" />
+          </div>
+          <p className={styles.modalTitle}>고객용 앱</p>
+          <div className={styles.modalImgBox}>
+            <img src={downloadGooglePlay} alt="구글플레이에서 다운로드하기 버튼" 
+              onClick={() => window.open("https://play.google.com/store/apps/details?id=com.androidpu.muinPu&hl=ko", "_blank")}
+            />
+            <img src={downloadAppStore} alt="앱 스토어에서 다운로드하기 버튼" 
+              onClick={() => window.open("https://apps.apple.com/kr/app/puffu/id6504068927", "_blank")}
+            />
+            <img src={downloadOnestore} alt="원스토어에서 다운로드하기 버튼" style={{ paddingTop: "0.1rem" }} 
+              onClick={() => window.open("https://m.onestore.co.kr/v2/ko-kr/app/0000779461", "_blank")}
+            />
+            <img src={downloadGalaxystore} alt="갤럭시스토어에서 다운로드하기 버튼" style={{ paddingTop: "0.1rem" }} 
+              onClick={() => window.open("https://galaxystore.samsung.com/detail/com.puffu.puffupayment", "_blank")}
+            />
           </div>
         </div>
       </div>

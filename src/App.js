@@ -18,6 +18,7 @@ import Section15 from './components/Section15';
 import Section16 from './components/Section16';
 import Section17 from './components/Section17';
 import Footer from './components/Footer';
+import TopBtn from './components/TopBtn';
 
 
 function App() {
@@ -54,6 +55,7 @@ function App() {
       <Section16 />
       <Section17 />
       <Footer />
+      <TopBtn />
     </>
   );
 }

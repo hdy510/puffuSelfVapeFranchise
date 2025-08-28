@@ -60,8 +60,8 @@ function Section7 () {
       rightBox: <div className={styles.smartPhoneImgBox}>
        <div className={styles.appBox}>
         <div className={styles.appTitleBox}>
-          <img src={appCustomer1} alt="고객용 앱 아이콘1" style={{ width: "57px" }} />
-          <img src={appCustomer2} alt="고객용 앱 아이콘1" style={{ width: "57px" }} />
+          <img src={appCustomer1} alt="고객용 앱 아이콘1" style={{ width: "3.563rem" }} />
+          <img src={appCustomer2} alt="고객용 앱 아이콘1" style={{ width: "3.563rem" }} />
           <p className={styles.appTitleTxt}>고객용 앱</p>
         </div>
         <div className={styles.appDownloadBox}>

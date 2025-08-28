@@ -36,16 +36,17 @@
 .cardBox {
   padding: 7rem 0;
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-between;
 }
 .leftBox {
+  width: 48%;
   display: flex;
   flex-direction: column;
   gap: 1.625rem;
   align-items: center;
 }
 .rightBox {
+  width: 48%;
   display: flex;
   flex-direction: column;
   gap: 1.625rem;
@@ -65,11 +66,15 @@
 .cardBoxImage {
   background-color: #373741;
   border-radius: 0.875rem;
-  width: 25.875rem;
+  // width: 25.875rem;
+  width: 100%;
   height: 21.625rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    height: 70%;
+  }
 }
 .cardBoxReference {
   font-size: 1rem;

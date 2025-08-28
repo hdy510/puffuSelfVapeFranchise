@@ -66,6 +66,9 @@
   align-items: center;
   gap: 1rem;
   padding: 2rem;
+  img {
+    width: 100%;
+  }
 }
 .price {
   font-size: 2.8rem;

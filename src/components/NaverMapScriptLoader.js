@@ -7,7 +7,6 @@ function NaverMapScriptLoader() {
     script.async = true;
     script.onload = () => {
       console.log("✅ Naver Maps script loaded!");
-
     };
     document.head.appendChild(script);
   }, []);

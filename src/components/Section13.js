@@ -30,7 +30,7 @@ const Section13 = forwardRef((props, ref) => {
         <div className={styles.procedureBox}>
           {procedureList.map((item, index) => (
             <div className={styles.imgBox} key={`procedure_${index}`}>
-              <img src={item.img} alt={item.title} />
+              <img src={item.img} alt={item.title} className={styles.orangeBlock} />
               {index === procedureList.length - 1 ? null : (
                 <img src={rightWhiteDoubleArrow} alt="오른쪽 화살표 아이콘" className={styles.rightArrow} />
               )}

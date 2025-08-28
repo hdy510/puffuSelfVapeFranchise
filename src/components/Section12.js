@@ -12,7 +12,7 @@ function Section12 () {
   return (
     <div className={styles.container}>
       <div className={styles.wrap}>
-        <img src={limitedBenefit} alt="한정혜택" />
+        <img src={limitedBenefit} alt="한정혜택" className={styles.limitedBenefit} />
         <div className={styles.titleBox}>
           <p className={styles.titleTxt}>월 최대</p>
           <img src={priceCard} alt="200만원" />

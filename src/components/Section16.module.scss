@@ -24,6 +24,7 @@
 .tabBox {
   display: flex;
   justify-content: start;
+  flex-wrap: wrap;
   gap: 0.7rem;
   padding-bottom: 2rem;
 }

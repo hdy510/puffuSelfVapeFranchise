@@ -39,7 +39,7 @@ function App() {
         section13Ref={section13Ref}
         section14Ref={section14Ref}
       />
-      {/* <Section1 /> */}
+      <Section1 />
       {/* <Section2 ref={section2Ref} /> */}
       {/* <Section3 /> */}
       {/* <Section4 ref={section4Ref} /> */}

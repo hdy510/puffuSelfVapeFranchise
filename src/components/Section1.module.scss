@@ -32,3 +32,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media (max-width: 768px) {
+  .logo {
+    width: clamp(10rem, 40vw, 20rem);
+  }
+}

@@ -87,7 +87,12 @@ function Section8 () {
       
       <div className={`${styles.modalScreen} ${modalImg && !isClosing ? styles.open : ""}`} onClick={handleCloseModal}>
         <div className={`${styles.modalBox} ${modalImg && !isClosing ? styles.open : ""}`} onClick={(e) => e.stopPropagation()}>
-          {modalImg && <img src={modalImg} alt="인테리어 확대 이미지" className={styles.modalImg} />}
+          {modalImg && (
+            <>
+              <img src={closeBtn} alt="닫기 버튼" className={styles.closeBtn} onClick={handleCloseModal} />
+              <img src={modalImg} alt="인테리어 확대 이미지" className={styles.modalImg} />
+            </>
+            )}
         </div>
       </div>
     </div>

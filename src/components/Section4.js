@@ -1,13 +1,124 @@
 import { forwardRef, useState, useRef } from "react";
 import styles from "./Section4.module.scss";
 import puffu from "../resources/puffu.png";
-import merits01a from "../resources/merits01a.png";
-import merits01b from "../resources/merits01b.png";
+import merit01a from "../resources/merit01a.png";
+import merit01b from "../resources/merit01b.png";
+import merit02a from "../resources/merit02a.png";
+import merit02b from "../resources/merit02b.png";
+import merit03a from "../resources/merit03a.png";
+import merit03b from "../resources/merit03b.png";
+import merit03c from "../resources/merit03c.png";
+import merit04a from "../resources/merit04a.png";
+import merit04b from "../resources/merit04b.png";
+import merit04c from "../resources/merit04c.png";
+import merit05a from "../resources/merit05a.png";
+import merit05b from "../resources/merit05b.png";
 
 const Section4 = forwardRef((props, ref) => {
-  // 어떤 merits가 열렸는지 관리 (index 기반)
   const [openIndex, setOpenIndex] = useState(null);
   const contentRefs = useRef([]);
+  const meritCard = [
+    {
+      id: "01",
+      title: "공장 직연결 공급망",
+      sub: "전자담배 생산 본사에서 고품질의 다양한 제품을 안정적으로 공급하고, 시장 변화에 빠르게 대응할 수 있습니다",
+      contents: (
+        <div className={styles.detailBox}>
+          <div className={styles.detailSubBox}>
+            <p className={styles.roundTitle}>타사</p>
+            <img src={merit01a} alt="공장에서 도매처를 점주에게 공급" className={styles.detailImg} />
+          </div>
+          <div className={styles.detailSubBox}>
+            <p className={`${styles.roundTitle} ${styles.orange}`}>위탁판매</p>
+            <img src={merit01b} alt="공장에서 점주에게 직접 공급" className={styles.detailImg} />
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: "02",
+      title: "무재고 위탁판매",
+      sub: "사입 부담 없이 필요한 수량만 공급받아 불필요한 재고 부담을 줄일 수 있습니다",
+      contents: 
+        <div className={styles.detailBox}>
+          <div className={styles.detailSubBox}>
+            <p className={styles.roundTitle}>사입(일반매입)</p>
+            <img src={merit02a} alt="사입, 상자가 쌓여있는 아이콘" className={styles.detailImg} />
+            <p className={styles.detailDescription}>점주가 직접 재고를 사입해야 하므로<br/>
+            초기 투자금이 크고, 팔리지 않는 재고 부담이 발생</p>
+          </div>
+          <div className={styles.detailSubBox}>
+            <p className={`${styles.roundTitle} ${styles.orange}`}>위탁판매</p>
+            <img src={merit02b} alt="위탁판매, 빈 상자에 달러 아이콘이 위에 있는 아이콘" className={styles.detailImg} />
+            <p className={styles.detailDescription}>본사가 재고를 보유하고 공급하기 때문에<br/>
+            점주는 매장을 채우는 것만으로 운영 가능</p>
+          </div>
+        </div>
+    },
+    {
+      id: "03",
+      title: "KC 인증 자판기",
+      sub: "국가 공식 KC 인증을 받은 자판기를 사용해 안전성과 신뢰성을 갖추고 있습니다",
+      contents: 
+        <div className={styles.detailBox}>
+          <div className={styles.detailSubBox}>
+            <img src={merit03a} alt="KC 인증 아이콘" className={styles.detailImg} />
+            <p className={styles.detailDescription}>KC 인증으로 안정성 검증</p>
+          </div>
+          <div className={styles.detailSubBox}>
+            <img src={merit03b} alt="불 아이콘" className={styles.detailImg} />
+            <p className={styles.detailDescription}>화재·감전 등 안전사고 예방 설계</p>
+          </div>
+          <div className={styles.detailSubBox}>
+            <img src={merit03c} alt="내구성 아이콘" className={styles.detailImg} />
+            <p className={styles.detailDescription}>장시간 사용 가능한 내구성</p>
+          </div>
+        </div>
+    },
+    {
+      id: "04",
+      title: "자체 운영 시스템",
+      sub: "다양한 전문가들이 모여 개발한 키오스크, 어플을 통해 더욱 효율적이고 체계적인 매장 운영을 가능하게 합니다",
+      contents: 
+        <div className={styles.detailBox}>
+          <div className={styles.detailSubBox}>
+            <p className={`${styles.roundTitle} ${styles.orange}`}>키오스크</p>
+            <img src={merit04a} alt="키오스크 아이콘" className={styles.detailImg} />
+            <p className={styles.detailDescription}>직관적인 UI/UX로<br/>
+            누구나 쉽게 이용 가능</p>
+          </div>
+          <div className={styles.detailSubBox}>
+            <p className={`${styles.roundTitle} ${styles.orange}`}>점주 앱</p>
+            <img src={merit04b} alt="핸드폰에 그래프 있는 아이콘" className={styles.detailImg} />
+            <p className={styles.detailDescription}>매출·매장관리·CCTV·<br/>
+            IoT 관리</p>
+          </div>
+          <div className={styles.detailSubBox}>
+            <p className={`${styles.roundTitle} ${styles.orange}`}>고객용 앱</p>
+            <img src={merit04c} alt="핸드폰에 QR 코드 있는 아이콘" className={styles.detailImg} />
+            <p className={styles.detailDescription}>본인인증, QR 결제,<br/>
+            선주문</p>
+          </div>
+        </div>
+    },
+    {
+      id: "05",
+      title: "미성년자 차단문",
+      sub: "매장에 유리로 된 중문을 설치해 미성년자 출입 문제를 원천 차단합니다",
+      contents: 
+        <div className={styles.detailBox}>
+          <div className={styles.detailSubBox}>
+            <img src={merit05a} alt="ALL 아이콘" className={styles.detailImg} />
+            <p className={styles.detailDescription}>누구나 둘러볼 수 있는 대기실</p>
+          </div>
+          <div className={styles.detailSubBox}>
+            <img src={merit05b} alt="문 아이콘" className={styles.detailImg} />
+            <p className={styles.detailDescription}>상품 구매는 성인인증 후<br/>
+            차단문 열고 입장</p>
+          </div>
+        </div>
+    },
+  ]
 
   const handleMouseEnter = (index) => {
     setOpenIndex(index);
@@ -28,44 +139,11 @@ const Section4 = forwardRef((props, ref) => {
           </div>
         </div>
         <ul className={styles.meritsBox}>
-          {[
-            {
-              id: "01",
-              title: "공장 직연결 공급망",
-              sub: "전자담배 생산 본사에서 고품질의 다양한 제품을 안정적으로 공급하고, 시장 변화에 빠르게 대응할 수 있습니다",
-              contents: (
-                <>
-                  <img
-                    src={merits01a}
-                    alt="타사는 공장에서 도매처를 거쳐 점주에게 공급"
-                    className={styles.hoverContentsImg}
-                  />
-                  <img
-                    src={merits01b}
-                    alt="푸푸는 공장에서 점주에게 직접 공급"
-                    className={styles.hoverContentsImg}
-                  />
-                </>
-              ),
-            },
-            {
-              id: "02",
-              title: "무재고 위탁판매",
-              sub: "사입 부담 없이 필요한 수량만 공급받아 불필요한 재고 부담을 줄일 수 있습니다",
-              contents: 
-              <>
-                <div>타사
-                  <div>이미지1</div>
-                  <div>이미지2</div>
-                  <div>이미지3</div>
-                </div>
-                <div>푸푸</div>
-              </>,
-            },
-          ].map((item, index) => (
+          {meritCard.map((item, index) => (
             <li
               key={index}
-              className={styles.meritsEach}
+              // 
+              className={`${styles.meritsEach} ${styles["index" + index]}`}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}
             >

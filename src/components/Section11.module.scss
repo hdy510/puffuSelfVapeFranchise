@@ -34,6 +34,7 @@
   justify-content: flex-end;
   gap: 4rem;
   height: 600px;
+  // background-color: rgb(138, 122, 122);
   position: relative;
 }
 .smile {
@@ -51,9 +52,12 @@
   position: absolute;
 }
 .diagramImgBox img {
+  width: 80%;
   position: absolute;
-  top: 0;
-  left: 0;
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .diagramTxtBoxWrap {
   width: 40.125rem;
@@ -70,25 +74,25 @@
   flex-direction: column;
   position: absolute;
   &.index0 {
-    top: 9%;
-    right: 84%;
+    top: 2%;
+    right: 64%;
     align-items: flex-end;
   }
   &.index1 {
-    right: 40%;
-    bottom: 84%;
+    right: 42%;
+    bottom: 78%;
   }
   &.index2 {
-    top: 12%;
-    right: 20%;
+    top: 17%;
+    right: 22%;
   }
   &.index3 {
-    top: 21%;
-    right: 15%;
+    top: 26%;
+    right: 17%;
   }
   &.index4 {
-    bottom: 30%;
-    left: 85%;
+    bottom: 15%;
+    left: 65%;
   }
 }
 .diagramKeyBig {

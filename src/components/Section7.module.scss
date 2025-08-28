@@ -152,8 +152,10 @@
 
 .monitoringImgBox {
   position: relative;
-  width: 38.313rem;
-  height: 22.375rem;
+  // width: 38.313rem;
+  // height: 22.375rem;
+  width: 100%;
+  aspect-ratio: 1.71/1;
   overflow: hidden;
   .fadeImg {
     position: absolute;

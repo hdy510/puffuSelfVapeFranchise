@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Section7.module.scss";
 import checkIcon from "../resources/checkIcon.png";
 import monitoringImg01 from "../resources/monitoringImg01.png";
@@ -18,6 +18,34 @@ import closeBtn from "../resources/closeBtn.png";
 
 
 function Section7 () {
+  // 24시 본사 관제 이미지
+  const MonitoringFade = () => {
+    const [active, setActive] = useState(0);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setActive((prev) => (prev === 0 ? 1 : 0));
+      }, 4000);
+      return () => clearInterval(interval);
+    }, []);
+  
+    return (
+      <div className={styles.monitoringImgBox}>
+        <img
+          src={monitoringImg01}
+          alt="24시 본사 관제 이미지1"
+          className={`${styles.fadeImg} ${active === 0 ? styles.show : ""}`}
+        />
+        <img
+          src={monitoringImg02}
+          alt="24시 본사 관제 이미지2"
+          className={`${styles.fadeImg} ${active === 1 ? styles.show : ""}`}
+        />
+      </div>
+    );
+  }
+  
+
   const tabs = [
     {
       key: "smartPhone",
@@ -90,18 +118,14 @@ function Section7 () {
         "문제 상황 발생 시 즉각 대응",
         "자동 발주",
       ],
-      rightBox: <div className={styles.monitoringImgBox}>
-        <img src={monitoringImg01} alt="24시 본사 관제 이미지1" className={styles.monitoringImg01} />
-        {/* <img src={monitoringImg02} alt="24시 본사 관제 이미지2" className={styles.monitoringImg02} /> */}
-      </div>
-     ,
+      rightBox: <MonitoringFade />
     },
   ];
   const [ tab, setTab ] = useState("smartPhone");
   const activeTab = tabs.find((t) => t.key === tab);
   const [ modalOpen, setModalOpen ] = useState(false);
 
-  
+
 
 
 

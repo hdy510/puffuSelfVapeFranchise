@@ -150,13 +150,24 @@
 
 .monitoringImgBox {
   position: relative;
-  img {
+  width: 613px; // 원하는 크기
+  height: 358px; // 원하는 크기
+  overflow: hidden;
+
+  .fadeImg {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 2s ease-in-out; // 은은한 페이드
+  }
+
+  .show {
+    opacity: 1;
   }
 }
-
 
 
 .modalScreen {

@@ -24,7 +24,7 @@ function Footer () {
               </li>
               <li className={styles.listEach}>
                 <span className={styles.label}>사업자등록번호</span>
-                <span>000-11-12345</span>
+                <span>729-86-02229</span>
               </li>
             </ul>
           </div>

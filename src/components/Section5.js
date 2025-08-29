@@ -61,14 +61,29 @@ function Section5 () {
         <div className={styles.swiperBox}>
         <Swiper
           modules={[Autoplay]} 
-          spaceBetween={50}
-          slidesPerView={7}
+          
           autoplay={{ delay: 1500, disableOnInteraction: false }}
           loop
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            480: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            768: {
+              spaceBetween: 50,
+              slidesPerView: 6
+            }
+          }}
         >
          {products.map((src, index) => (
           <SwiperSlide key={`product_${index}`}>
-            <img src={src} alt="상품 이미지" />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img src={src} alt="상품 이미지" />
+            </div>
           </SwiperSlide>
          ))} 
         </Swiper>

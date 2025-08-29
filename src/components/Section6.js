@@ -3,6 +3,7 @@ import puffuWhite from "../resources/puffuWhite.png";
 
 
 function Section6 () {
+
   const productDiversityList = [
     { brand: "A사", kind: "15종", count: "15~60개" },
     { brand: "B사", kind: "170종", count: "1,700개" },
@@ -37,7 +38,7 @@ function Section6 () {
           </ul>
           <div className={styles.diagramPuffu}>
             <div className={styles.diagramPuffuLogo}>
-              <img src={puffuWhite} alt="푸푸" />
+              <img src={puffuWhite} alt="푸푸" className={styles.puffuImg} />
             </div>
             <div className={styles.diagramPuffuTxt}>230종</div>
             <div className={styles.diagramPuffuTxt}>2,850개</div>

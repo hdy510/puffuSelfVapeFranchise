@@ -15,11 +15,13 @@
   padding-bottom: 5rem;
 }
 .title {
-  font-size: var(--title-font-size);
+  font-size: clamp(2rem, 4vw, var(--title-font-size));
   font-weight: 700;
+  word-break: keep-all;
 }
 .orangeText {
   color: var(--color-main);
+  white-space: nowrap;
 }
 .diagramBox {
   max-width: 49.375rem;
@@ -39,6 +41,7 @@
 .diagramTitleTxt {
   width: 25%;
   font-size: 1.5rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   font-weight: 700;
   text-align: center;
 }
@@ -60,12 +63,12 @@
 }
 .secondLi1 {
   width: 50%;
-  font-size: 1.25rem;
+  font-size: clamp(1.063rem, 2vw, 1.25rem);
   color: #bcbcbc;
 }
 .secondLi2, .secondLi3 {
   width: 25%;
-  font-size: 1.25rem;
+  font-size: clamp(1.063rem, 2vw, 1.25rem);
   color: #6b625f;
 }
 .diagramPuffu {
@@ -81,9 +84,60 @@
   width: 50%;
   text-align: center;
 }
+.puffuImg {
+}
 .diagramPuffuTxt {
   width: 25%;
-  font-size: 1.875rem;
+  font-size: clamp(1.5rem, 1.5vw, 1.875rem);
   font-weight: 700;
   text-align: center;
+}
+
+
+
+// 반응형
+@media (max-width: 768px) {
+  .diagramBox {
+    gap: 1rem;
+  }
+  .diagramPuffu {
+    padding: 1.5rem 0.3rem;
+  }
+  .dummy {
+    width: 36%;
+  }
+  .diagramTitle {
+    padding: 0 0.3rem;
+  }
+  .diagramTitleTxt {
+    width: 32%;
+  }
+  .secondUl {
+    padding: 1.1rem 0.3rem;
+  }
+  .secondLi1 {
+    width: 36%;
+    font-size: 1rem;
+  }
+  .secondLi2, .secondLi3 {
+    font-size: 1rem;
+  }
+  .diagramPuffuLogo {
+    width: 36%;
+  }
+  .secondLi2, .secondLi3 {
+    width: 32%;
+  }
+  .puffuImg {
+    width: clamp(5.5rem, 10vw, 12rem);
+  } 
+  .diagramPuffuTxt {
+    width: 30%;
+    font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    padding: 4rem 1.25rem 4rem;
+  }
 }

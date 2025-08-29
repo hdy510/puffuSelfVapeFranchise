@@ -8,6 +8,7 @@
   z-index: 1000;
 }
 .wrap {
+  background-color: #212225;
   max-width: 80rem;
   height: 100%;
   padding: 0 1.25rem;
@@ -18,6 +19,7 @@
   position: relative;
   &.isMobile {
     justify-content: center;
+    z-index: 200;
   }
 }
 .logo {
@@ -82,18 +84,19 @@
 }
 
 .sideMenu {
-  position: absolute;
-  top: 0;
-  left: 100%;
+  width: 100%;
+  top: -16.875rem;
   background-color: #212225;
+  position: absolute;
+  z-index: 100;
   padding: 1rem;
-  width: 10rem;
-  height: 100dvh;
   display: flex;
   flex-direction: column;
-  transition: left 0.5s;
+  opacity: 0;
+  transition: top 0.5s, opacity 0.5s;
   &.open {
-    left: calc(100% - 10rem);
+    top: 4.375rem;
+    opacity: 1;
   }
 }
 .closeBtn {
@@ -103,7 +106,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  padding-top: 1.2rem;
 }
 .navListMobile {
   padding: 0.7rem;

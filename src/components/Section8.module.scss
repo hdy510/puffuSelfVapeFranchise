@@ -34,8 +34,8 @@
   color: white;
   background-color: var(--color-main);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   top: 56.5%;
   &::after {
     font-size: 1.25rem;
@@ -56,7 +56,7 @@
   font-weight: 700;
   padding: 1rem 1.5rem;
   background-color: var(--color-main);
-  border-radius: 100px;
+  border-radius: 6.25rem;
   width: fit-content;
 }
 .slideImgBox {

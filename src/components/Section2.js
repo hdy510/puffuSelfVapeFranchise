@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+import { useResponsive } from "../utils/useResponsive";
 import styles from "./Section2.module.scss";
 import circleGray from "../resources/circleGray.png";
 import circleOrange from "../resources/circleOrange.png";
@@ -9,6 +10,8 @@ import marketGraph1 from "../resources/marketGraph1.png";
 import marketGraph2 from "../resources/marketGraph2.png";
 
 const Section2 = forwardRef((props, ref) => {
+  const { isMobile, isLargeMobile, isTabletAndDesktop } = useResponsive();
+
   return (
     <div className={styles.container} ref={ref}>
       <div className={styles.wrap}>
@@ -17,7 +20,11 @@ const Section2 = forwardRef((props, ref) => {
             <h1 className={`${styles.title} ${styles.heading1}`}>커지는 <span className={styles.orangeText}>전자담배</span> 시장!<br />
             폭발하는 <span className={styles.orangeText}>무인매장</span> 수요!
             </h1>
-            <p className={`${styles.subTitle} ${styles.heading1Sub}`}>전자담배와 무인매장, 두 상승 곡선이 만나는 지금! 기회를 선점하세요</p>
+            {isTabletAndDesktop ? (
+              <p className={`${styles.subTitle} ${styles.heading1Sub}`}>전자담배와 무인매장, 두 상승 곡선이 만나는 지금! 기회를 선점하세요</p>
+            ) : (
+              <p className={`${styles.subTitle} ${styles.heading1Sub}`}>전자담배와 무인매장, 두 상승 곡선이 만나는 지금!<br/> 기회를 선점하세요</p>
+            )}
           </div>
           <div className={styles.cardBox}>
             <div className={styles.leftBox}>
@@ -60,7 +67,7 @@ const Section2 = forwardRef((props, ref) => {
                 <img src={circleGray} alt="일반 소매업 평균은 1.5배 마진" />
                 <span className={styles.leftCircleBoxNum}>1.5배</span>
               </div>
-              <p className={styles.circleBoxLable}>일반 소매업 평균</p>
+              <p className={styles.circleBoxLabel}>일반 소매업 평균</p>
             </div>
             <div className={styles.rightCircleBox}>
               <div className={styles.rightCircleBoxWrap}>
@@ -69,15 +76,20 @@ const Section2 = forwardRef((props, ref) => {
                 <img src={circleOrange} alt="푸푸는 2.7배 마진" />
                 <span className={styles.rightCircleBoxNum}>2.7배</span>
               </div>
-              <p className={styles.circleBoxLable}>푸푸 전자담배</p>
+              <p className={styles.circleBoxLabel}>푸푸 전자담배</p>
             </div>
           </div>
         </div>
 
         <div className={styles.part3}>
           <div className={styles.titleBox}>
-            <h3 className={styles.title}>고마진 아이템과 무인 시스템 운영으로<br/>
-            <span className={styles.orangeText}>고마진 저관리</span> 창업 모델 실현</h3>
+            {isTabletAndDesktop ? (
+              <h3 className={styles.title}>고마진 아이템과 무인 시스템 운영으로<br/>
+              <span className={styles.orangeText}>고마진 저관리</span> 창업 모델 실현</h3>
+            ) : (
+              <h3 className={styles.title}>고마진 아이템과<br/> 무인 시스템 운영으로<br/>
+              <span className={styles.orangeText}>고마진 저관리</span> 창업 모델 실현</h3>
+            )}
           </div>
           <div className={styles.arrowBox}>
             <div className={styles.arrowBoxSubBox}>

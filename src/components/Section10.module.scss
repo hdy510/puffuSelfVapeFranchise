@@ -201,14 +201,14 @@
   background: linear-gradient(90deg,rgba(254, 116, 31, 1) 0%, rgba(254, 88, 31, 1) 100%);
   border-radius: 0.5rem;
   border: 0.063rem solid rgba($color: #ffe7da, $alpha: 0.4);
-  box-shadow: 0px 0px 9px rgba($color: #FFAE96, $alpha: 0.5);
+  box-shadow: 0 0 0.563rem rgba($color: #FFAE96, $alpha: 0.5);
 }
 .diagramPuffuLogo {
   width: 35%;
   text-align: center;
 }
 .diagramPuffuTxt {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 700;
   text-align: center;
   &.index0 {

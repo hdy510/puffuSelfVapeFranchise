@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 import headerLogo from "../resources/headerLogo.png";
 import iconPhone from "../resources/iconPhone.png";
 import menuBtn from "../resources/menuBtn.png";
-import closeBtn from "../resources/closeBtn.png";
+import sideMenuCloseBtn from "../resources/sideMenuCloseBtn.png";
 
 function Header({ section2Ref, section4Ref, section10Ref, section13Ref, section14Ref }) {
   const { isMobile, isLargeMobile, isTabletAndDesktop } = useResponsive();
@@ -46,35 +46,53 @@ function Header({ section2Ref, section4Ref, section10Ref, section13Ref, section1
             </div>
             </div>
         ) : (
-          <div className={`${styles.wrap} ${styles.isMobile}`}>
-            <a href="/" className={styles.logo}>
-              <img src={headerLogo} alt="로고" className={styles.logoImg} />
-            </a>
-            <div className={styles.menuBtn} onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <img src={menuBtn} alt="메뉴 아이콘" />
+          <div style={{ height: "100%", position: "relative" }}>
+            <div className={`${styles.wrap} ${styles.isMobile}`}>
+              <a href="/" className={styles.logo}>
+                <img src={headerLogo} alt="로고" className={styles.logoImg} />
+              </a>
+              <div className={styles.menuBtn} onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                {isMenuOpen ? (
+                  <img src={sideMenuCloseBtn} alt="닫기 아이콘" />
+                ) : (
+                  <img src={menuBtn} alt="메뉴 아이콘" />
+                )}
+              </div>
             </div>
             <div className={`${styles.sideMenu} ${isMenuOpen ? styles.open : ""}`}>
-              <div className={styles.closeBtn} onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <img src={closeBtn} alt="메뉴 아이콘" />
-              </div>
-              <nav className={styles.navMobile}>
-                <div className={styles.navListMobile}
-                onClick={() => scrollToSection(section2Ref)}
-                >기회는 지금!</div>
-                <div className={styles.navListMobile}
-                onClick={() => scrollToSection(section4Ref)}
-                >푸푸의 메리트</div>
-                <div className={styles.navListMobile}
-                onClick={() => scrollToSection(section10Ref)}
-                >창업 패키지</div>
-                <div className={styles.navListMobile}
-                onClick={() => scrollToSection(section13Ref)}
-                >창업절차</div>
-                <div className={styles.navListMobile}
-                onClick={() => scrollToSection(section14Ref)}
-                >창업문의</div>
-              </nav>
-            </div>
+            <nav className={styles.navMobile}>
+              <div className={styles.navListMobile}
+              onClick={() => {
+                scrollToSection(section2Ref)
+                setIsMenuOpen(!isMenuOpen)
+              }}
+              >기회는 지금!</div>
+              <div className={styles.navListMobile}
+              onClick={() => {
+                scrollToSection(section4Ref)
+                setIsMenuOpen(!isMenuOpen)
+              }}
+              >푸푸의 메리트</div>
+              <div className={styles.navListMobile}
+              onClick={() => {
+                scrollToSection(section10Ref)
+                setIsMenuOpen(!isMenuOpen)
+              }}
+              >창업 패키지</div>
+              <div className={styles.navListMobile}
+              onClick={() => {
+                scrollToSection(section13Ref)
+                setIsMenuOpen(!isMenuOpen)
+              }}
+              >창업절차</div>
+              <div className={styles.navListMobile}
+              onClick={() => {
+                scrollToSection(section14Ref)
+                setIsMenuOpen(!isMenuOpen)
+              }}
+              >창업문의</div>
+            </nav>
+          </div>
           </div>
         )}
     </header>

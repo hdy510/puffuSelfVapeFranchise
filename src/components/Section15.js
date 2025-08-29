@@ -104,7 +104,7 @@ function Section15() {
                   key={idx}
                   className={styles.storeBox}
                   style={{ 
-                    borderBottom : idx === stores.length - 1 ? "none" : "1px solid #E5E5E5",
+                    borderBottom : idx === stores.length - 1 ? "none" : "0.063rem solid #E5E5E5",
                     paddingTop: idx === 0 ? "0" : "1rem",
                     paddingBottom: idx === stores.length - 1 ? "0" : "1rem"
                    }}

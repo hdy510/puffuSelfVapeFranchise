@@ -48,10 +48,10 @@
   min-height: 31.25rem;
 }
 .listEach {
-  border-top: 1px solid rgba($color: #D9D9D9, $alpha: 0.4);
+  border-top: 0.063rem solid rgba($color: #D9D9D9, $alpha: 0.4);
   padding: 0.8rem;
   &.last {
-    border-bottom: 1px solid rgba($color: #D9D9D9, $alpha: 0.4);
+    border-bottom: 0.063rem solid rgba($color: #D9D9D9, $alpha: 0.4);
   }
 }
 .questionBox {

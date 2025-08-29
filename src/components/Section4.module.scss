@@ -15,31 +15,35 @@
   padding-bottom: 5rem;
 }
 .title {
-  font-size: var(--title-font-size);
+  font-size: clamp(2rem, 4vw, var(--title-font-size));
   font-weight: 700;
+  word-break: keep-all;
 }
 .titleSeconRow {
   display: flex;
   align-items: flex-end;
-  gap: 1.5rem;
+  gap: clamp(1rem, 1.5vw, 1.5rem);
+}
+.puffuImg {
+  height: clamp(3rem, 6vw, 5.2rem);
 }
 .titleSeconRowTxt {
-  font-size: var(--title-font-size);
+  font-size: clamp(2rem, 4vw, var(--title-font-size));
   font-weight: 700;
+  word-break: keep-all;
 }
 .meritsBox {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-
 }
 .meritsEach {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(1rem, 1.5vw, 2rem);
   border-radius: 0.75rem;
-  padding: 3rem 2rem 2rem;
+  padding: clamp(2rem, 3vw, 3rem) 2rem clamp(1rem, 1.5vw, 2rem);
   // background-color: #282A30;
   background-size: cover;
   background-position: center center;
@@ -82,7 +86,7 @@
   }
 }
 .meritsId {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   font-weight: 700;
   background-color: var(--color-main);
   padding: 0.4rem 0.8rem;
@@ -90,11 +94,15 @@
   width: fit-content;
 }
 .meritsTitle {
-  font-size: 2.25rem;
+  font-size: clamp(1.875rem, 3vw, 2.25rem);
   font-weight: 700;
 }
 .meritsSubTitle {
-  font-size: 1.125rem;
+  // font-size: 1.125rem;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  text-align: center;
+  line-height: 1.5;
+  word-break: keep-all;
 }
 
 .hoverContents {
@@ -108,14 +116,14 @@
 .detailBox {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: clamp(0rem, 5vw, 4rem);
   padding-top: 1rem;
   .roundTitle {
-    font-size: 1.313rem;
+    font-size: clamp(1.1rem, 1.5vw, 1.313rem);
+    padding: clamp(0.8rem, 0.8vw, 0.8rem) clamp(1.5rem, 1.5vw, 2rem);
     font-weight: 700;
     background-color: #373741;
     border-radius: 6.25rem;
-    padding: 0.8rem 2rem;
     &.orange {
       background-color: var(--color-main);
     }
@@ -133,5 +141,42 @@
     text-align: center;
     padding-bottom: 1rem;
     color: #aaaaaa;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
   }
+}
+
+
+
+// 반응형
+@media (max-width: 768px) {
+  .detailBox {
+    .roundTitle {
+      font-size: 1rem;
+      padding: 0.6rem 1.4rem;
+    }
+    .detailImg {
+      width: fit-content;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .titleBox {
+    padding-bottom: 3rem;
+  }
+  .title {
+    font-size: clamp(1.5rem, 6vw, var(--title-font-size));
+  }
+  .puffuImg {
+    height: clamp(2.5rem, 5vw, 5.2rem);
+  }
+  .titleSeconRow {
+    gap: clamp(0.5rem, 1.5vw, 1.5rem);
+  }
+  .titleSeconRowTxt {
+    font-size: clamp(1.5rem, 6vw, var(--title-font-size));
+  }
+  .meritsSubTitle {
+    font-size: 0.875rem;
+  }
+
 }

@@ -42,8 +42,8 @@ function App() {
       <Section1 />
       <Section2 ref={section2Ref} />
       <Section3 />
-      {/* <Section4 ref={section4Ref} />
-      <Section5 />
+      <Section4 ref={section4Ref} />
+      {/* <Section5 />
       <Section6 />
       <Section7 />
       <Section8 />

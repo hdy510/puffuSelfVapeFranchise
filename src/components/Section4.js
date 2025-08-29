@@ -134,7 +134,7 @@ const Section4 = forwardRef((props, ref) => {
         <div className={styles.titleBox}>
           <h2 className={styles.title}>성공적인 창업으로 이끄는</h2>
           <div className={styles.titleSeconRow}>
-            <img src={puffu} alt="PUFFU" />
+            <img src={puffu} alt="PUFFU" className={styles.puffuImg} />
             <p className={styles.titleSeconRowTxt}>만의 메리트</p>
           </div>
         </div>

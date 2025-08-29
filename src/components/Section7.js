@@ -60,8 +60,8 @@ function Section7 () {
       rightBox: <div className={styles.smartPhoneImgBox}>
        <div className={styles.appBox}>
         <div className={styles.appTitleBox}>
-          <img src={appCustomer1} alt="고객용 앱 아이콘1" style={{ width: "3.563rem" }} />
-          <img src={appCustomer2} alt="고객용 앱 아이콘1" style={{ width: "3.563rem" }} />
+          <img src={appCustomer1} alt="고객용 앱 아이콘1" className={styles.appIcon} />
+          <img src={appCustomer2} alt="고객용 앱 아이콘1" className={styles.appIcon} />
           <p className={styles.appTitleTxt}>고객용 앱</p>
         </div>
         <div className={styles.appDownloadBox}>
@@ -138,7 +138,7 @@ function Section7 () {
             <ul className={styles.tabContentItemBox}>
               {list.map((content, index) => (
                 <li className={styles.tabContentItem} key={`tabItem_${index}`}>
-                  <img src={checkIcon} alt="체크 아이콘" />
+                  <img src={checkIcon} alt="체크 아이콘" className={styles.checkIcon} />
                   <p className={styles.tabContentItemTxt}>{content}</p>
                 </li>
               ))}

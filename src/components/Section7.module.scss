@@ -36,13 +36,19 @@
   gap: clamp(0.7rem, 1vw, 1rem);
 }
 .tabMenu {
-  width: 30%;
+  width: 33%;
   background-color: #424242;
   border-radius: clamp(0.5rem, 0.5vw, 0.75rem);
   padding: clamp(0.7rem, 1vw, 1rem);
+  padding-top: clamp(0.8rem, 1vw, 1.1rem);
   text-align: center;
   font-size: clamp(1.2rem, 2.2vw, 1.688rem);
   font-weight: 700;
+  word-break: keep-all;
+  line-height: 1.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: all 0.3s;
   &.active {
@@ -79,8 +85,7 @@
   align-items: center;
   gap: 1rem;
   background-color: rgba($color: #D9D9D9, $alpha: 0.1);
-  padding: 1.2rem;
-  padding: clamp(0.9rem, 1vw, 1.2rem);
+  padding: clamp(0.9rem, 1.4vw, 1.2rem);
   border-radius: 0.625rem;
   border: 0.063rem solid #4B4B4B;
 }
@@ -129,6 +134,7 @@
   font-size: 1rem;
   padding-top: 1rem;
   line-height: 1.3;
+  word-break: keep-all;
 }
 
 .kioskImgBox {
@@ -143,7 +149,7 @@
     }
   }
   .kioskImg {
-    
+    width: 100%;
   }
   .dimmed {
     position: absolute;
@@ -154,6 +160,7 @@
     transition: all 0.5s;
   }
   .kioskDemo {
+    width: 12.313rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -169,7 +176,7 @@
   position: relative;
   // width: 38.313rem;
   // height: 22.375rem;
-  width: 100%;
+  width: 85%;
   aspect-ratio: 1.71/1;
   overflow: hidden;
   .fadeImg {
@@ -258,15 +265,99 @@
 
 // 반응형
 @media (max-width: 1280px) {
-  .leftBox {
-    width: 42%;
+  .tabContentSection {
+    flex-direction: column;
+    gap: 2.4rem;
   }
-  .rightBox {
-    width: 55%;
+  .leftBox, .rightBox {
+    width: 100%;
+  }
+
+  .tabContentItemBox {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .tabContentItem {
+    width: 49%;
+  }
+  .smartPhoneImgBox {
+    gap: 2rem;
+  }
+  .kioskImgBox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .kioskImg {
+      width: 60%;
+    }
+    .dimmed {
+      width: 60%;
+    }
+    .kioskDemo {
+      width: 20%;
+    }
+  }
+  .monitoringImgBoxWrap {
+    display: flex;
+    justify-content: center;
+  }
+  .monitoringImgBox {
+    width: 62%;
+  }
+}
+@media (max-width: 768px) {
+  .tabContentItem {
+    width: 48%;
+  }
+  .tabContentItemTxt {
+    font-size: 1rem;
+  }
+  .monitoringImgBox {
+    width: 75%;
+  }
+  .kioskImgBox {
+    .kioskImg {
+      width: 75%;
+      min-width: 23rem;
+    }
+    .dimmed {
+      width: 75%;
+      min-width: 23rem;
+    }
+    .kioskDemo {
+      width: 27%;
+      min-width: 10rem;
+    }
   }
 }
 @media (max-width: 480px) {
   .wrap {
     padding: 4rem 1.25rem 0;
+  }
+  .downloadLink {
+    width: 8rem;
+  }
+  .appBoxSubTxt {
+    font-size: 0.875rem;
+  }
+  .moreCircleIcon {
+    width: 2.6rem;
+  }
+  .monitoringImgBox {
+    width: 80%;
+  }
+  .kioskImgBox {
+    .kioskImg {
+      width: 90%;
+      min-width: unset;
+    }
+    .dimmed {
+      width: 90%;
+      min-width: unset;
+    }
+    .kioskDemo {
+      width: 40%;
+      min-width: unset;
+    }
   }
 }

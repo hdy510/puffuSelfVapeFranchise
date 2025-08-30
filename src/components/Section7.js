@@ -30,17 +30,19 @@ function Section7 () {
     }, []);
   
     return (
-      <div className={styles.monitoringImgBox}>
-        <img
-          src={monitoringImg01}
-          alt="24시 본사 관제 이미지1"
-          className={`${styles.fadeImg} ${active === 0 ? styles.show : ""}`}
-        />
-        <img
-          src={monitoringImg02}
-          alt="24시 본사 관제 이미지2"
-          className={`${styles.fadeImg} ${active === 1 ? styles.show : ""}`}
-        />
+      <div className={styles.monitoringImgBoxWrap}>
+        <div className={styles.monitoringImgBox}>
+          <img
+            src={monitoringImg01}
+            alt="24시 본사 관제 이미지1"
+            className={`${styles.fadeImg} ${active === 0 ? styles.show : ""}`}
+          />
+          <img
+            src={monitoringImg02}
+            alt="24시 본사 관제 이미지2"
+            className={`${styles.fadeImg} ${active === 1 ? styles.show : ""}`}
+          />
+        </div>
       </div>
     );
   }
@@ -78,7 +80,7 @@ function Section7 () {
        </div>
        <div className={styles.appBox}>
         <div className={styles.appTitleBox}>
-            <img src={appVendor} alt="점주용 앱 아이콘" />
+            <img src={appVendor} alt="점주용 앱 아이콘" className={styles.appIcon} />
             <p className={styles.appTitleTxt}>점주용 앱</p>
           </div>
           <div className={styles.appDownloadBox}>
@@ -86,8 +88,7 @@ function Section7 () {
               onClick={() => window.open("https://apps.apple.com/kr/app/puffu-%EC%82%AC%EC%9E%A5%EB%8B%98/id6749678115", "_blank")}
             />
           </div>
-          <p className={styles.appBoxSubTxt}>안드로이드 기종 점주에게는 별도의 다운로드 링크를 통해 <br/>
-          앱을 제공해드립니다</p>
+          <p className={styles.appBoxSubTxt}>안드로이드 기종 점주에게는 별도의 다운로드 링크를 통해 앱을 제공해드립니다</p>
        </div>
       </div>
     },

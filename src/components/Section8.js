@@ -62,6 +62,7 @@ function Section8 () {
                     />
                   ))}
                 </div>
+                <p className={`${styles.storeName} ${styles.unshown}`}>대흥직영점</p>
               </div>
             </SwiperSlide>
             <SwiperSlide>

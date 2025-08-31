@@ -56,8 +56,8 @@ function App() {
       <Section15 />
       <Section16 />
       <Section17 />
-      {/*<Footer />
-      <TopBtn /> */}
+      <Footer />
+      <TopBtn />
     </>
   );
 }

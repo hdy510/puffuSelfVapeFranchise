@@ -32,7 +32,7 @@ function TopBtn() {
       <img
         src={upIcon}
         alt="Top 버튼 아이콘"
-        style={{ transform: "rotate(180deg)", paddingTop: "0.2rem" }}
+        className={styles.icon}
       />
     </div>
   );

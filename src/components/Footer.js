@@ -1,7 +1,9 @@
 import styles from "./Footer.module.scss";
+import { useResponsive } from "../utils/useResponsive";
 
 
 function Footer () {
+  const { isMobile, isLargeMobile, isTabletAndDesktop } = useResponsive();
   return (
     <footer className={styles.container}>
       <div className={styles.wrap}>
@@ -28,12 +30,20 @@ function Footer () {
               </li>
             </ul>
           </div>
-          <p>Copyright ⓒ 푸푸 24시무인전자담배 all Rights Reserved.</p>
+          {!isTabletAndDesktop && (
+            <div className={styles.contactBox}>
+              <p className={styles.contact}>가맹문의</p>
+              <p className={styles.phoneNumber}>070-4242-2000</p>
+            </div>
+          )}
+          <p className={styles.copyright}>Copyright ⓒ 푸푸 24시무인전자담배 all Rights Reserved.</p>
         </div>
-        <div className={styles.rightBox}>
-          <p className={styles.contact}>가맹문의</p>
-          <p className={styles.phoneNumber}>070-4242-2000</p>
-        </div>
+        {isTabletAndDesktop && (
+          <div className={styles.rightBox}>
+            <p className={styles.contact}>가맹문의</p>
+            <p className={styles.phoneNumber}>070-4242-2000</p>
+          </div>
+        )}
       </div>
     </footer>
   )

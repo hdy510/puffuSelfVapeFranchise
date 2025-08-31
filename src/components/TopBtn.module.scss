@@ -27,3 +27,22 @@
     transform: translateY(0);
   }
 }
+.icon {
+  transform: rotate(180deg);
+  padding-top: 0.2rem;
+}
+
+
+// 반응형
+@media (max-width: 768px) {
+  .container {
+    bottom: 10rem;
+    right: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    bottom: 10rem;
+    right: 1.2rem;
+  }
+}

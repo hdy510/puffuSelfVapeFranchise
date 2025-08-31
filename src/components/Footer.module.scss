@@ -9,12 +9,12 @@
   padding: 3rem 2.813rem 3rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .leftTopBox {
   display: flex;
-  gap: 3rem;
+  gap: clamp(1.5rem, 2vw, 3rem);
   padding-bottom: 2rem;
 }
 
@@ -23,18 +23,46 @@
   padding-bottom: 0.7rem;
 }
 .label {
+  font-size: clamp(1rem, 1vw, 1.25rem);
   font-weight: 700;
   color: #fff;
   padding-right: 0.7rem;
 }
+.contactBox {
+  padding-bottom: 2rem;
+}
 .contact {
-  font-size: 1.75rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
   font-weight: 700;
   text-align: right;
 }
 .phoneNumber {
   color: var(--color-main);
   font-size: 1.75rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
   font-weight: 700;
   padding-top: 0.3rem;
+}
+
+
+// 반응형
+@media (max-width: 768px) {
+  .copyright {
+    font-size: 0.875rem;
+  }
+  .leftTopBox {
+    flex-direction: column;
+    gap: 0;
+  }
+  .contact {
+    text-align: left;
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    padding: 2rem 1.25rem 2rem;
+  }
+  .copyright {
+    font-size: clamp(0.7rem, 3vw, 0.875rem);
+  }
 }

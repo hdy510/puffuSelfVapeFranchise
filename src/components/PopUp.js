@@ -17,7 +17,7 @@ function PopUp({ onClose }) {
       const closedAt = localStorage.getItem(`popup_${p.id}_closedAt`);
       if (closedAt) {
         const diff = Date.now() - Number(closedAt);
-        if (diff < 10000) { // 10초 동안 유지 (실제는 86400000)
+        if (diff < 86400000) { // 10초(10000) 동안 유지 (실제는 86400000)
           return { ...p, visible: false };
         } else {
           localStorage.removeItem(`popup_${p.id}_closedAt`);

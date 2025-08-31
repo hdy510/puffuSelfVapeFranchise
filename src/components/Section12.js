@@ -20,7 +20,7 @@ function Section12 () {
           <img src={priceCard} alt="200만원" className={styles.priceCard} />
           <p className={styles.titleTxt}>까지 지원!</p>
         </div>
-        <p className={styles.subTxt}>월 매출에서 공급가와 수수료를 뺀{isMobile || isLargeMobile && <br/>} 점주 마진이 200만원 보다 적을 경우<br/>
+        <p className={styles.subTxt}>월 매출에서 공급가와 수수료를 뺀{(isMobile || isLargeMobile) && <br/>} 점주 마진이 200만원 보다 적을 경우<br/>
         본사가 부족한 금액을 지원해드립니다</p>
         <figure className={styles.diagramBox}>
           <div className={styles.diagramTitle}>

@@ -113,6 +113,7 @@
   background: var(--linear-gradient-orange);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: blink 0.8s infinite alternate;
 }
 .bigTxt {
   font-size: 6rem;
@@ -126,6 +127,20 @@
   font-size: 1.375rem;
   font-weight: 700;
   color: #aaa;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  29% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+   100% {
+    opacity: 1;
+  }
 }
 
 

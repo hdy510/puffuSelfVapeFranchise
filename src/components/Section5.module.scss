@@ -75,6 +75,7 @@
   font-size: clamp(2.2rem, 6vw, 3.125rem);
   font-weight: 700;
   color: var(--color-main);
+  animation: blink 0.8s infinite alternate;
 }
 .swiperBox {
   padding-top: 1.5rem;
@@ -90,6 +91,21 @@
     width: 100%;
   }
 }
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  29% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+   100% {
+    opacity: 1;
+  }
+}
+
 
 
 // 반응형

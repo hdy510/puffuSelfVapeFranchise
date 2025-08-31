@@ -30,6 +30,7 @@
 }
 .priceCard {
   width: clamp(12rem, 25vw, 23rem);
+  animation: blink 0.8s infinite alternate;
 }
 .subTxt {
   text-align: center;
@@ -96,6 +97,20 @@
 .ps {
   font-size: 1rem;
   color: #aaa;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  29% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+   100% {
+    opacity: 1;
+  }
 }
 
 

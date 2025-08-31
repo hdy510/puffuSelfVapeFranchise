@@ -1,6 +1,8 @@
 import { forwardRef } from "react";
 import { useResponsive } from "../utils/useResponsive";
+import { useScrollFadeIn } from "../utils/useScrollFadeIn";
 import styles from "./Section2.module.scss";
+import animations from "./titleAnimation.module.scss";
 import circleGray from "../resources/circleGray.png";
 import circleOrange from "../resources/circleOrange.png";
 import rightGrayArrow from "../resources/rightGrayArrow.png";
@@ -11,13 +13,17 @@ import marketGraph2 from "../resources/marketGraph2.png";
 
 const Section2 = forwardRef((props, ref) => {
   const { isMobile, isLargeMobile, isTabletAndDesktop } = useResponsive();
+  const { ref: part1Ref, isVisible: isPart1Visible } = useScrollFadeIn({ threshold: 0.3 });
+  const { ref: part2Ref, isVisible: isPart2Visible } = useScrollFadeIn({ threshold: 0.3 });
+  const { ref: part3Ref, isVisible: isPart3Visible } = useScrollFadeIn({ threshold: 0.3 });
 
   return (
     <div className={styles.container} ref={ref}>
       <div className={styles.wrap}>
-        <div className={styles.part1}>
-          <div className={styles.titleBox}>
-            <h1 className={`${styles.title} ${styles.heading1}`}>커지는 <span className={styles.orangeText}>전자담배</span> 시장!<br />
+        <div ref={part1Ref} className={`${styles.part1} ${animations.fadeInUp} ${isPart1Visible ? animations.show : ""} `}>
+          <div className={`${styles.titleBox}`}>
+            <h1 
+            className={`${styles.title} ${styles.heading1}`}>커지는 <span className={styles.orangeText}>전자담배</span> 시장!<br />
             폭발하는 <span className={styles.orangeText}>무인매장</span> 수요!
             </h1>
             {isTabletAndDesktop ? (
@@ -56,7 +62,7 @@ const Section2 = forwardRef((props, ref) => {
           </div>
         </div>
 
-        <div className={styles.part2}>
+        <div ref={part2Ref} className={`${styles.part2} ${animations.fadeInUp} ${isPart2Visible ? animations.show : ""} `}>
           <div className={styles.titleBox}>
             <h2 className={styles.title}><span className={styles.orangeText}>고마진</span> 창업 아이템!</h2>
             <p className={styles.subTitle}>푸푸 전자담배는 도매가 대비 약 2.7배의 소비자가가 적용되는 고마진 창업 아이템입니다</p>
@@ -81,7 +87,7 @@ const Section2 = forwardRef((props, ref) => {
           </div>
         </div>
 
-        <div className={styles.part3}>
+        <div ref={part3Ref} className={`${styles.part3} ${animations.fadeInUp} ${isPart3Visible ? animations.show : ""}`}>
           <div className={styles.titleBox}>
             {isTabletAndDesktop ? (
               <h3 className={styles.title}>고마진 아이템과 무인 시스템 운영으로<br/>

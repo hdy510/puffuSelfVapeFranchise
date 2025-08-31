@@ -25,14 +25,18 @@
   gap: 1rem;
 }
 .titleTxt {
-  font-size: 4.25rem;
+  font-size: clamp(3rem, 6vw, 4.25rem);
   font-weight: 700;
+}
+.priceCard {
+  width: clamp(12rem, 25vw, 23rem);
 }
 .subTxt {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
   color: #eee;
   line-height: 1.5;
+  word-break: keep-all;
 }
 
 .diagramBox {
@@ -49,7 +53,7 @@
   padding: 0 1.25rem;
 }
 .diagramTitleTxt {
-  font-size: 1.5rem;
+  font-size: clamp(1.3rem, 1.5vw, 1.5rem);
   font-weight: 700;
   text-align: center;
   display: flex;
@@ -76,15 +80,15 @@
   width: 33%;
 }
 .secondLi1 {
-  font-size: 1.25rem;
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
   color: #898482;
 }
 .secondLi2{
-  font-size: 1.25rem;
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
   color: #BCBCBC;
 }
 .secondLi3 {
-  font-size: 1.688rem;
+  font-size: clamp(1.3rem, 2vw, 1.688rem);
   color: var(--color-main);
   font-weight: 700;
 }
@@ -92,4 +96,63 @@
 .ps {
   font-size: 1rem;
   color: #aaa;
+}
+
+
+
+// 반응형
+@media (max-width: 768px) {
+  .titleTxt {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+  }
+  .priceCard {
+    width: clamp(8rem, 25vw, 12rem);
+  }
+  .diagramTitleTxt {
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  }
+  .secondLi1 {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
+  .secondLi2{
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
+  .secondLi3 {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    padding: 4rem 1.25rem 4rem;
+  }
+  .titleBox {
+    flex-direction: column;
+  }
+  .titleTxt {
+    font-size: 2.2rem;
+  }
+  .priceCard {
+    width: 11rem;
+  }
+  .diagramTitle {
+    padding: 0 0.5rem;
+  }
+  .diagramTitleTxt {
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+  }
+  .secondUl {
+    padding: 1rem 0.5rem;
+  }
+  .secondLi1 {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+  .secondLi2{
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+  .secondLi3 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+  .ps {
+    font-size: 0.875rem;
+  }
 }

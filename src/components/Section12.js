@@ -1,8 +1,10 @@
 import styles from "./Section12.module.scss";
 import limitedBenefit from "../resources/limitedBenefit.png";
 import priceCard from "../resources/priceCard.png";
+import { useResponsive } from "../utils/useResponsive";
 
 function Section12 () {
+  const { isMobile, isLargeMobile, isTabletAndDesktop } = useResponsive();
   const exampleList = [
     { margin: "40만원", support: "+160만원", finalProfit: "200만원" },
     { margin: "100만원", support: "+100만원", finalProfit: "200만원" },
@@ -15,10 +17,10 @@ function Section12 () {
         <img src={limitedBenefit} alt="한정혜택" className={styles.limitedBenefit} />
         <div className={styles.titleBox}>
           <p className={styles.titleTxt}>월 최대</p>
-          <img src={priceCard} alt="200만원" />
+          <img src={priceCard} alt="200만원" className={styles.priceCard} />
           <p className={styles.titleTxt}>까지 지원!</p>
         </div>
-        <p className={styles.subTxt}>월 매출에서 공급가와 수수료를 뺀 점주 마진이 200만원 보다 적을 경우<br/>
+        <p className={styles.subTxt}>월 매출에서 공급가와 수수료를 뺀{isMobile || isLargeMobile && <br/>} 점주 마진이 200만원 보다 적을 경우<br/>
         본사가 부족한 금액을 지원해드립니다</p>
         <figure className={styles.diagramBox}>
           <div className={styles.diagramTitle}>

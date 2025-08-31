@@ -18,8 +18,9 @@
   padding-bottom: 4rem;
 }
 .title {
-  font-size: var(--title-font-size);
+  font-size: clamp(2rem, 4vw, var(--title-font-size));
   font-weight: 700;
+  word-break: keep-all;
 }
 
 .procedureBox {
@@ -30,7 +31,7 @@
   margin: 0 auto;
 }
 .imgBox {
-  width: 16.66%;
+  width: 16%;
   position: relative;
   .orangeBlock {
     width: 100%;
@@ -40,13 +41,48 @@
   width: 20%;
   position: absolute;
   top: 50%;
-  right: -1.5rem;
+  right: -11%;
   transform: translateY(-50%);
   z-index: 2;
+}
+.downArrow {
+  width: 8%;
+  position: absolute;
+  left: 50%;
+  top: 122%;
+  z-index: 2;
+  transform: translateX(-50%) rotate(90deg);
 }
 .subTxt {
   font-size: 1rem;
   line-height: 1.5;
   width: 97%;
   margin: 0 auto;
+  word-break: keep-all;
+}
+
+
+// 반응형
+@media (max-width: 1280px) {}
+@media (max-width: 768px) {
+  .procedureBox {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .imgBox {
+    width: 48%;
+    min-width: 19rem;
+  }
+  .subTxt {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    padding: 4rem 1.25rem 4rem;
+  }
+  .subTxt {
+    font-size: 0.875rem;
+  }
 }

@@ -124,6 +124,7 @@
     font-weight: 700;
     background-color: #373741;
     border-radius: 6.25rem;
+    white-space: nowrap;
     &.orange {
       background-color: var(--color-main);
     }
@@ -135,13 +136,17 @@
     gap: 2rem;
   }
   .detailImg {
-    width: fit-content;
+    // width: fit-content;
+    width: 100%;
+    max-width: 50rem;
+    padding-bottom: 1rem;
   }
   .detailDescription {
     text-align: center;
     padding-bottom: 1rem;
     color: #aaaaaa;
     font-size: clamp(0.9rem, 1.5vw, 1rem);
+    word-break: keep-all;
   }
 }
 
@@ -155,7 +160,6 @@
       padding: 0.6rem 1.4rem;
     }
     .detailImg {
-      width: fit-content;
     }
   }
 }
@@ -180,6 +184,30 @@
   }
   .meritsSubTitle {
     font-size: 0.875rem;
+  }
+  .hoverContents {
+    max-height: none;
+    overflow: visible;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .detailBox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    .roundTitle {
+      margin-top: 1rem;
+    }
+    .detailSubBox {
+      gap: 0.5rem;
+    }
+    .detailImg {
+      height: 7rem;
+      width: auto;
+      // height: auto;
+      // width: 100%;
+      // max-width: 100%;
+    }
   }
 
 }

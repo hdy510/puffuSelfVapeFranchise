@@ -14,9 +14,24 @@ import merit04b from "../resources/merit04b.png";
 import merit04c from "../resources/merit04c.png";
 import merit05a from "../resources/merit05a.png";
 import merit05b from "../resources/merit05b.png";
+import meritMobile01a from "../resources/meritMobile01a.png";
+import meritMobile01b from "../resources/meritMobile01b.png";
+import meritMobile02a from "../resources/meritMobile02a.png";
+import meritMobile02b from "../resources/meritMobile02b.png";
+import meritMobile03a from "../resources/meritMobile03a.png";
+import meritMobile03b from "../resources/meritMobile03b.png";
+import meritMobile03c from "../resources/meritMobile03c.png";
+import meritMobile04a from "../resources/meritMobile04a.png";
+import meritMobile04b from "../resources/meritMobile04b.png";
+import meritMobile04c from "../resources/meritMobile04c.png";
+import meritMobile05a from "../resources/meritMobile05a.png";
+import meritMobile05b from "../resources/meritMobile05b.png";
+
 import { useScrollFadeIn } from "../utils/useScrollFadeIn";
+import { useResponsive } from "../utils/useResponsive";
 
 const Section4 = forwardRef((props, ref) => {
+  const { isMobile, isLargeMobile, isTabletAndDesktop } = useResponsive();
   const [openIndex, setOpenIndex] = useState(null);
   const contentRefs = useRef([]);
   const { ref: wrapRef, isVisible: isWrapVisible } = useScrollFadeIn({ threshold: 0.3 });
@@ -29,11 +44,11 @@ const Section4 = forwardRef((props, ref) => {
         <div className={styles.detailBox}>
           <div className={styles.detailSubBox}>
             <p className={styles.roundTitle}>타사</p>
-            <img src={merit01a} alt="공장에서 도매처를 점주에게 공급" className={styles.detailImg} />
+            <img src={isMobile ? meritMobile01a : merit01a} alt="공장에서 도매처를 점주에게 공급" className={styles.detailImg} />
           </div>
           <div className={styles.detailSubBox}>
             <p className={`${styles.roundTitle} ${styles.orange}`}>위탁판매</p>
-            <img src={merit01b} alt="공장에서 점주에게 직접 공급" className={styles.detailImg} />
+            <img src={isMobile ? meritMobile01b : merit01b} alt="공장에서 점주에게 직접 공급" className={styles.detailImg} />
           </div>
         </div>
       ),
@@ -46,15 +61,15 @@ const Section4 = forwardRef((props, ref) => {
         <div className={styles.detailBox}>
           <div className={styles.detailSubBox}>
             <p className={styles.roundTitle}>사입(일반매입)</p>
-            <img src={merit02a} alt="사입, 상자가 쌓여있는 아이콘" className={styles.detailImg} />
-            <p className={styles.detailDescription}>점주가 직접 재고를 사입해야 하므로<br/>
-            초기 투자금이 크고, 팔리지 않는 재고 부담이 발생</p>
+            <img src={isMobile ? meritMobile02a : merit02a } alt="점주가 직접 재고를 사입해야 하므로 초기 투자금이 크고, 팔리지 않는 재고 부담이 발생" className={styles.detailImg} />
+            {/* <p className={styles.detailDescription}>점주가 직접 재고를 사입해야 하므로<br/>
+            초기 투자금이 크고, 팔리지 않는 재고 부담이 발생</p> */}
           </div>
           <div className={styles.detailSubBox}>
             <p className={`${styles.roundTitle} ${styles.orange}`}>위탁판매</p>
-            <img src={merit02b} alt="위탁판매, 빈 상자에 달러 아이콘이 위에 있는 아이콘" className={styles.detailImg} />
-            <p className={styles.detailDescription}>본사가 재고를 보유하고 공급하기 때문에<br/>
-            점주는 매장을 채우는 것만으로 운영 가능</p>
+            <img src={isMobile ? meritMobile02b : merit02b} alt="본사가 재고를 보유하고 공급하기 때문에 점주는 매장을 채우는 것만으로 운영 가능" className={styles.detailImg} />
+            {/* <p className={styles.detailDescription}>본사가 재고를 보유하고 공급하기 때문에<br/>
+            점주는 매장을 채우는 것만으로 운영 가능</p> */}
           </div>
         </div>
     },
@@ -65,16 +80,16 @@ const Section4 = forwardRef((props, ref) => {
       contents: 
         <div className={styles.detailBox}>
           <div className={styles.detailSubBox}>
-            <img src={merit03a} alt="KC 인증 아이콘" className={styles.detailImg} />
-            <p className={styles.detailDescription}>KC 인증으로 안정성 검증</p>
+            <img src={isMobile ? meritMobile03a : merit03a} alt="KC 인증으로 안정성 검증" className={styles.detailImg} />
+            {/* <p className={styles.detailDescription}>KC 인증으로 안정성 검증</p> */}
           </div>
           <div className={styles.detailSubBox}>
-            <img src={merit03b} alt="불 아이콘" className={styles.detailImg} />
-            <p className={styles.detailDescription}>화재·감전 등 안전사고 예방 설계</p>
+            <img src={isMobile ? meritMobile03b : merit03b} alt="화재·감전 등 안전사고 예방 설계 " className={styles.detailImg} />
+            {/* <p className={styles.detailDescription}>화재·감전 등 안전사고 예방 설계</p> */}
           </div>
           <div className={styles.detailSubBox}>
-            <img src={merit03c} alt="내구성 아이콘" className={styles.detailImg} />
-            <p className={styles.detailDescription}>장시간 사용 가능한 내구성</p>
+            <img src={isMobile ? meritMobile03c: merit03c} alt="장시간 사용 가능한 내구성" className={styles.detailImg} />
+            {/* <p className={styles.detailDescription}>장시간 사용 가능한 내구성</p> */}
           </div>
         </div>
     },
@@ -86,21 +101,21 @@ const Section4 = forwardRef((props, ref) => {
         <div className={styles.detailBox}>
           <div className={styles.detailSubBox}>
             <p className={`${styles.roundTitle} ${styles.orange}`}>키오스크</p>
-            <img src={merit04a} alt="키오스크 아이콘" className={styles.detailImg} />
-            <p className={styles.detailDescription}>직관적인 UI/UX로<br/>
-            누구나 쉽게 이용 가능</p>
+            <img src={isMobile ? meritMobile04a: merit04a} alt="직관적인 UI/UX로 누구나 쉽게 이용 가능" className={styles.detailImg} />
+            {/* <p className={styles.detailDescription}>직관적인 UI/UX로<br/>
+            누구나 쉽게 이용 가능</p> */}
           </div>
           <div className={styles.detailSubBox}>
             <p className={`${styles.roundTitle} ${styles.orange}`}>점주 앱</p>
-            <img src={merit04b} alt="핸드폰에 그래프 있는 아이콘" className={styles.detailImg} />
-            <p className={styles.detailDescription}>매출·매장관리·CCTV·<br/>
-            IoT 관리</p>
+            <img src={isMobile ? meritMobile04b: merit04b} alt="매출·매장관리·CCTV·IoT 관리" className={styles.detailImg} />
+            {/* <p className={styles.detailDescription}>매출·매장관리·CCTV·<br/>
+            IoT 관리</p> */}
           </div>
           <div className={styles.detailSubBox}>
             <p className={`${styles.roundTitle} ${styles.orange}`}>고객용 앱</p>
-            <img src={merit04c} alt="핸드폰에 QR 코드 있는 아이콘" className={styles.detailImg} />
-            <p className={styles.detailDescription}>본인인증, QR 결제,<br/>
-            선주문</p>
+            <img src={isMobile ? meritMobile04c: merit04c} alt="본인인증, QR 결제, 선주문" className={styles.detailImg} />
+            {/* <p className={styles.detailDescription}>본인인증, QR 결제,<br/>
+            선주문</p> */}
           </div>
         </div>
     },
@@ -111,13 +126,13 @@ const Section4 = forwardRef((props, ref) => {
       contents: 
         <div className={styles.detailBox}>
           <div className={styles.detailSubBox}>
-            <img src={merit05a} alt="ALL 아이콘" className={styles.detailImg} />
-            <p className={styles.detailDescription}>누구나 둘러볼 수 있는 대기실</p>
+            <img src={isMobile ? meritMobile05a: merit05a} alt="누구나 둘러볼 수 있는 대기실" className={styles.detailImg} />
+            {/* <p className={styles.detailDescription}>누구나 둘러볼 수 있는 대기실</p> */}
           </div>
           <div className={styles.detailSubBox}>
-            <img src={merit05b} alt="문 아이콘" className={styles.detailImg} />
-            <p className={styles.detailDescription}>상품 구매는 성인인증 후<br/>
-            차단문 열고 입장</p>
+            <img src={isMobile ? meritMobile05b: merit05b} alt="상품 구매는 성인인증 후 차단문 열고 입장" className={styles.detailImg} />
+            {/* <p className={styles.detailDescription}>상품 구매는 성인인증 후<br/>
+            차단문 열고 입장</p> */}
           </div>
         </div>
     },
@@ -145,7 +160,6 @@ const Section4 = forwardRef((props, ref) => {
           {meritCard.map((item, index) => (
             <li
               key={index}
-              // 
               className={`${styles.meritsEach} ${styles["index" + index]}`}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={handleMouseLeave}

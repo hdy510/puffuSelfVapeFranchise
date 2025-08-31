@@ -17,14 +17,17 @@
   padding-bottom: 10rem;
 }
 .title {
-  font-size: var(--title-font-size);
+  font-size: clamp(2rem, 4vw, var(--title-font-size));
   font-weight: 700;
+  word-break: keep-all;
 }
 .orangeText {
   color: var(--color-main);
 }
 .subTitle {
-  font-size: var(--subTitle-font-size);
+  font-size: clamp(1rem, 1.7vw, var(--subTitle-font-size));
+  line-height: 1.5;
+  word-break: keep-all;
 }
 
 .diagramBox {
@@ -33,8 +36,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 4rem;
-  height: 37.5rem;
-  // background-color: rgb(138, 122, 122);
+  height: 40.125rem;
   position: relative;
 }
 .smile {
@@ -54,7 +56,6 @@
 .diagramImgBox img {
   width: 80%;
   position: absolute;
-  
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -63,10 +64,15 @@
   width: 40.125rem;
   height: 40.125rem;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .diagramSubTxt {
   font-size: 1rem;
   color: #aaa;
+  text-align: center;
+  word-break: keep-all;
 }
 
 .diagramTxtBox {
@@ -74,24 +80,24 @@
   flex-direction: column;
   position: absolute;
   &.index0 {
-    top: 2%;
+    top: 0%;
     right: 64%;
     align-items: flex-end;
   }
   &.index1 {
     right: 42%;
-    bottom: 78%;
+    bottom: 80%;
   }
   &.index2 {
-    top: 17%;
+    top: 15%;
     right: 22%;
   }
   &.index3 {
-    top: 26%;
+    top: 24%;
     right: 17%;
   }
   &.index4 {
-    bottom: 15%;
+    bottom: 17%;
     left: 65%;
   }
 }
@@ -120,4 +126,144 @@
   font-size: 1.375rem;
   font-weight: 700;
   color: #aaa;
+}
+
+
+
+// 반응형
+@media (max-width: 1280px) {
+  .smile {
+    width: 2.5rem;
+  }
+  .diagramBox {
+    height: 35rem;
+  }
+  .diagramImgBox {
+    width: 35rem;
+    height: 35rem;
+  }
+  .diagramTxtBoxWrap {
+    width: 35rem;
+    height: 35rem;
+  }
+  .diagramKeyBig {
+    font-size: 2.5rem;
+  }
+  .diagramValueBig {
+    font-size: 3rem;
+  }
+  .bigTxt {
+    font-size: 5rem;
+  }
+  .diagramKey {
+    font-size: 1.2rem;
+  }
+  .diagramValue {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .titleBox {
+    padding-bottom: 5rem;
+  }
+  .smile {
+    width: 1.8rem;
+  }
+  .diagramBox {
+    height: 32rem;
+  }
+  .diagramImgBox {
+    width: 27rem;
+    height: 27rem;
+  }
+  .diagramTxtBoxWrap {
+    width: 27rem;
+    height: 27rem;
+  }
+  .diagramTxtBox {
+    &.index0 {
+      right: 60%;
+    }
+    &.index4 {
+      bottom: 13%;
+      left: 55%;
+    }
+  }
+  .diagramKeyBig {
+    font-size: 1.8rem;
+  }
+  .diagramValueBig {
+    font-size: 2rem;
+  }
+  .bigTxt {
+    font-size: 3.2rem;
+  }
+  .diagramKey {
+    font-size: 1rem;
+  }
+  .diagramValue {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    padding: 4rem 1.25rem 4rem;
+  }
+  .titleBox {
+    padding-bottom: 3rem;
+  }
+  .smile {
+    width: 1.4rem;
+  }
+  .diagramBox {
+    height: 28rem;
+  }
+  .diagramImgBox {
+    width: 22rem;
+    height: 22rem;
+  }
+  .diagramTxtBoxWrap {
+    width: 22rem;
+    height: 22rem;
+  }
+  .diagramTxtBox {
+    &.index0 {
+      top: -5%;
+      right: 55%;
+    }
+    &.index1 {
+      right: 39%;
+      bottom: 83%;
+    }
+    &.index2 {
+      top: 10%;
+      right: 15%;
+    }
+    &.index3 {
+      top: 20%;
+      right: 14%;
+    }
+    &.index4 {
+      bottom: 9%;
+      left: 45%;
+    }
+  }
+  .diagramKeyBig {
+    font-size: 1.8rem;
+  }
+  .diagramValueBig {
+    font-size: 1.6rem;
+  }
+  .bigTxt {
+    font-size: 2.8rem;
+  }
+  .diagramKey {
+    font-size: 1rem;
+  }
+  .diagramValue {
+    font-size: 1rem;
+  }
+  .diagramSubTxt {
+    font-size: 0.875rem;
+  }
 }

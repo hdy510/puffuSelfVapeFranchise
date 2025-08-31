@@ -20,13 +20,13 @@ function Section11 () {
           </p>
         </div>
         <div className={styles.diagramBox}>
-          <img src={smile} alt="도너츠 차트 - 순수익" className={styles.smile} />
+          <img src={smile} alt="푸푸 로고" className={styles.smile} />
           <div className={styles.diagramImgBox}>
             <img src={chart1} alt="도너츠 차트 - 순수익" className={styles.chart1} />
-            <img src={chart2} alt="도너츠 차트 - 순수익" className={styles.chart2} />
-            <img src={chart3} alt="도너츠 차트 - 순수익" className={styles.chart3} />
-            <img src={chart4} alt="도너츠 차트 - 순수익" className={styles.chart4} />
-            <img src={chart5} alt="도너츠 차트 - 순수익" className={styles.chart5} />
+            <img src={chart2} alt="도너츠 차트 - 잡비" className={styles.chart2} />
+            <img src={chart3} alt="도너츠 차트 - 카드수수료" className={styles.chart3} />
+            <img src={chart4} alt="도너츠 차트 - 임대료" className={styles.chart4} />
+            <img src={chart5} alt="도너츠 차트 - 판매량에 따른 제품 공급가" className={styles.chart5} />
           </div>
           <div className={styles.diagramTxtBoxWrap}>
             <div className={`${styles.diagramTxtBox} ${styles.index0}`}>

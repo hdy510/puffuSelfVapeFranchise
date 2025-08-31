@@ -1,5 +1,6 @@
 import { forwardRef, useState, useRef } from "react";
 import styles from "./Section4.module.scss";
+import animations from "./titleAnimation.module.scss";
 import puffu from "../resources/puffu.png";
 import merit01a from "../resources/merit01a.png";
 import merit01b from "../resources/merit01b.png";
@@ -13,10 +14,12 @@ import merit04b from "../resources/merit04b.png";
 import merit04c from "../resources/merit04c.png";
 import merit05a from "../resources/merit05a.png";
 import merit05b from "../resources/merit05b.png";
+import { useScrollFadeIn } from "../utils/useScrollFadeIn";
 
 const Section4 = forwardRef((props, ref) => {
   const [openIndex, setOpenIndex] = useState(null);
   const contentRefs = useRef([]);
+  const { ref: wrapRef, isVisible: isWrapVisible } = useScrollFadeIn({ threshold: 0.3 });
   const meritCard = [
     {
       id: "01",
@@ -130,7 +133,7 @@ const Section4 = forwardRef((props, ref) => {
 
   return (
     <div className={styles.container} ref={ref}>
-      <div className={styles.wrap}>
+      <div ref={wrapRef} className={`${styles.wrap} ${animations.fadeInUp} ${isWrapVisible ? animations.show : ""} `}>
         <div className={styles.titleBox}>
           <h2 className={styles.title}>성공적인 창업으로 이끄는</h2>
           <div className={styles.titleSeconRow}>

@@ -1,4 +1,5 @@
 import styles from "./Section3.module.scss";
+import animations from "./titleAnimation.module.scss";
 import worry1Txt from "../resources/worry1Txt.png";
 import worry2Txt from "../resources/worry2Txt.png";
 import worry3Txt from "../resources/worry3Txt.png";
@@ -18,11 +19,14 @@ import worry4TxtMobile from "../resources/worry4TxtMobile.png";
 import worry5TxtMobile from "../resources/worry5TxtMobile.png";
 import worry6TxtMobile from "../resources/worry6TxtMobile.png";
 import { useResponsive } from "../utils/useResponsive";
+import { useScrollFadeIn } from "../utils/useScrollFadeIn";
+
 
 
 
 function Section3 () {
   const { isMobile, isLargeMobile, isTabletAndDesktop } = useResponsive();
+  const { ref: wrapRef, isVisible: isWrapVisible } = useScrollFadeIn({ threshold: 0.3 });
   const worries = [
     { txt: worry1Txt, txtMobile: worry1TxtMobile, emoji: worry1Emoji, altTxt: "업종 변경을 고려하고 있어요", altEmoji: "턱을 만지면서 고민하는 이모티콘" },
     { txt: worry2Txt, txtMobile: worry2TxtMobile, emoji: worry2Emoji, altTxt: "소자본으로 안정적으로 창업하고 싶어요", altEmoji: "행복한 표정의 이모티콘" },
@@ -33,7 +37,7 @@ function Section3 () {
   ];
   return (
     <div className={styles.container}>
-      <div className={styles.wrap}>
+      <div ref={wrapRef} className={`${styles.wrap} ${animations.fadeInUp} ${isWrapVisible ? animations.show : ""}`}>
         <div className={styles.titleBox}>
           {isTabletAndDesktop ? (
             <h2 className={styles.title}>

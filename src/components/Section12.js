@@ -2,8 +2,12 @@ import styles from "./Section12.module.scss";
 import limitedBenefit from "../resources/limitedBenefit.png";
 import priceCard from "../resources/priceCard.png";
 import { useResponsive } from "../utils/useResponsive";
+import { useScrollFadeIn } from "../utils/useScrollFadeIn";
+import animations from "./titleAnimation.module.scss";
+
 
 function Section12 () {
+  const { ref: wrapRef, isVisible: isWrapVisible } = useScrollFadeIn({ threshold: 0.3 });
   const { isMobile, isLargeMobile, isTabletAndDesktop } = useResponsive();
   const exampleList = [
     { margin: "40만원", support: "+160만원", finalProfit: "200만원" },
@@ -13,7 +17,7 @@ function Section12 () {
 
   return (
     <div className={styles.container}>
-      <div className={styles.wrap}>
+      <div ref={wrapRef} className={`${styles.wrap} ${animations.fadeInUp} ${isWrapVisible ? animations.show : ""}`}>
         <img src={limitedBenefit} alt="한정혜택" className={styles.limitedBenefit} />
         <div className={styles.titleBox}>
           <p className={styles.titleTxt}>월 최대</p>

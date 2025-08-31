@@ -306,6 +306,12 @@
   }
 }
 @media (max-width: 768px) {
+  .wrap {
+    padding: 5rem 2.813rem 5rem;
+  }
+  .titleBox {
+    padding-bottom: 3rem;
+  }
   .tabContentItem {
     width: 48%;
   }
@@ -333,9 +339,6 @@
 @media (max-width: 480px) {
   .wrap {
     padding: 4rem 1.25rem 0;
-  }
-  .titleBox {
-    padding-bottom: 3rem;
   }
   .tabMenu {
     font-size: 1rem;

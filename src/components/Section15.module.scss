@@ -89,6 +89,9 @@
   }
 }
 @media (max-width: 768px) {
+  .wrap {
+    padding: 5rem 2.813rem 5rem;
+  }
   .contentsWrap {
     flex-direction: column;
     gap: 1rem;

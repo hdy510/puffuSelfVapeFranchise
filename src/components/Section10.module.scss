@@ -262,6 +262,12 @@
   }
 }
 @media (max-width: 768px) {
+  .wrap {
+    padding: 5rem 2.813rem 5rem;
+  }
+  .titleBox {
+    padding-bottom: 3rem;
+  }
   .packageCardBox {
     gap: 1.5rem;
   }
@@ -321,9 +327,6 @@
 @media (max-width: 480px) {
   .wrap {
     padding: 4rem 1.25rem 4rem;
-  }
-  .titleBox {
-    padding-bottom: 3rem;
   }
   .cancelLine {
     width: 5rem;

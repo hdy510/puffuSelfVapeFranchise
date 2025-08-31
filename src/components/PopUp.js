@@ -56,10 +56,10 @@ function PopUp({ onClose }) {
   return (
     <div className={styles.container}>
       <div className={styles.wrap}>
-        {popups.map((popup) => (
+        {popups.map((popup, index) => (
           <div
             key={popup.id}
-            className={`${styles.popUp} ${!popup.visible ? styles.hidden : ""}`}
+            className={`${styles.popUp} ${styles[`index${index}`]} ${!popup.visible ? styles.hidden : ""}`}
           >
             <div className={styles.imgBox}>
               <img

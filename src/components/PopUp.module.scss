@@ -6,8 +6,6 @@
   width: 100%;
   height: 100%;
   background-color: rgba($color: #000000, $alpha: 0.5);
-  // opacity: 0;
-  // visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,9 +15,12 @@
   }
 }
 .wrap {
+  width: 100%;
+  padding: 0 1rem;
   max-width: 80rem;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
+  gap: clamp(0.4rem, 1vw, 1rem);
 }
 .popUp {
   border-radius: 0.5rem;
@@ -62,8 +63,45 @@
 }
 .txt {
   color: #666;
-  font-size: 0.938rem;
+  font-size: clamp(0.7rem, 1vw, 0.938rem);
   font-family: sans-serif;
   font-weight: 500;
   white-space: nowrap;
+}
+
+
+
+// 반응형
+@media (max-width: 768px) {
+  .wrap {
+    position: relative;
+    width: 70%;
+    height: 33.75rem;
+  }
+  .popUp {
+    position: absolute;
+    &.index0 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-60%, -60%);
+    }
+    &.index1 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &.index2 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -40%);
+    }
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    width: 80%;
+  }
+  .popUp {
+    width: 90%;
+  }
 }

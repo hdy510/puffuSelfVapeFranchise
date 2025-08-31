@@ -4,9 +4,12 @@ import packageBasic from "../resources/packageBasic.png";
 import packageAllInOne from "../resources/packageAllInOne.png";
 import orangeLine from "../resources/orangeLine.png";
 import puffuWhite from "../resources/puffuWhite.png";
+import { useResponsive } from "../utils/useResponsive";
 
 
 const Section10 = forwardRef((props, ref) => {
+  const { isMobile, isLargeMobile, isTabletAndDesktop } = useResponsive();
+
   const serviceCostList = [
     { service: "무인세탁소", startUpCost: "4,500만원", maintenanceCost: "400만원" },
     { service: "무인골프장", startUpCost: "34,412만원", maintenanceCost: "1,100만원" },
@@ -101,7 +104,11 @@ const Section10 = forwardRef((props, ref) => {
             <div className={styles.diagramPuffuLogo}>
               <img src={puffuWhite} alt="푸푸" />
             </div>
-            <div className={`${styles.diagramPuffuTxt} ${styles.index0}`}>3,000만원/5,500만원</div>
+            {isTabletAndDesktop ? (
+              <div className={`${styles.diagramPuffuTxt} ${styles.index0}`}>3,000만원/5,500만원</div>
+            ) : (
+              <div className={`${styles.diagramPuffuTxt} ${styles.index0}`}>3,000만원/<br/>5,500만원</div>
+            )}
             <div className={`${styles.diagramPuffuTxt} ${styles.index1}`}>0원</div>
           </div>
         </figure>

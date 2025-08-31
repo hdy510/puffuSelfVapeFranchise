@@ -44,6 +44,9 @@
 
 // 반응형
 @media (max-width: 768px) {
+  .wrap {
+    padding: 6rem 1.25rem 6rem;
+  }
   .title {
     font-size: clamp(1.2rem, 3vw, 2rem);
   }

@@ -21,6 +21,7 @@ import Section17 from './components/Section17';
 import Footer from './components/Footer';
 import TopBtn from './components/TopBtn';
 import PopUp from './components/PopUp';
+import BottomNav from './components/BottomNav';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
       <Section17 />
       <Footer />
       <TopBtn />
+      <BottomNav />
       
       {isPopUpOpen && <PopUp onClose={() => setIsPopUpOpen(false)} />}
     </>

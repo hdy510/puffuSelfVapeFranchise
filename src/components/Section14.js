@@ -17,7 +17,7 @@ const Section14 = forwardRef((props, ref) => {
                   <input 
                     type="text" 
                     name="username"
-                    placeholder="성함을 알려주세요" 
+                    placeholder="성함을 입력해 주세요" 
                     required
                     className={styles.inputTag}
                   />
@@ -29,7 +29,7 @@ const Section14 = forwardRef((props, ref) => {
                   <input
                     type="tel"
                     name="phoneNumber"
-                    placeholder="상담받을 연락처를 입력해 주세요"
+                    placeholder="연락처를 입력해 주세요"
                     required
                     className={styles.inputTag}
                   />

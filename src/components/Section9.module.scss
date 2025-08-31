@@ -48,16 +48,16 @@
     padding: 6rem 1.25rem 6rem;
   }
   .title {
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-size: clamp(1.2rem, 4.5vw, 2rem);
   }
   .orangeText {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.2rem, 4.5vw, 3rem);
   }
   .subTitle {
-    font-size: clamp(1rem, 1.7vw, 1.2rem);
+    font-size: clamp(1.2rem, 2vw, 1.2rem);
   }
   .subOrangeText {
-    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    font-size: clamp(1.3rem, 4vw, 1.5rem);
   }
 }
 @media (max-width: 480px) {

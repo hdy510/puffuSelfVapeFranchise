@@ -16,17 +16,22 @@
   gap: 1.375rem;
   padding-bottom: 4rem;
 }
-.title {
-  font-size: var(--title-font-size);
-  font-weight: 700;
-  text-align: center;
-}
 .titleSecondRow {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 1.5rem;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
 }
+.puffu {
+  width: clamp(10rem, 25vw, 20rem);
+}
+.title {
+  font-size: clamp(1.5rem, 4vw, var(--title-font-size));
+  font-weight: 700;
+  word-break: keep-all;
+  text-align: center;
+}
+
 
 .snsBox {
   display: flex;
@@ -60,4 +65,34 @@
 }
 .snsName {
   font-size: 1.125rem;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+}
+
+
+// 반응형
+@media (max-width: 768px) {
+  .snsBox {
+    flex-wrap: wrap;
+    gap: clamp(0.6rem, 2vw, 1rem);
+  }
+  .snsCard {
+    width: 45%;
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    padding: 4rem 1.25rem 4rem;
+  }
+  .titleBox {
+    padding-bottom: 2rem;
+  }
+  .puffu {
+    width: clamp(8rem, 20vw, 10rem);
+  }
+  .title {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+  .snsBox {
+    padding-top: 1rem;
+  }
 }

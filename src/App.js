@@ -55,8 +55,8 @@ function App() {
       <Section14 ref={section14Ref} />
       <Section15 />
       <Section16 />
-      {/*<Section17 />
-      <Footer />
+      <Section17 />
+      {/*<Footer />
       <TopBtn /> */}
     </>
   );

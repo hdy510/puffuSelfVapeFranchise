@@ -13,7 +13,7 @@ function Section17 () {
         <div className={styles.titleBox}>
           <p className={styles.title}>신뢰를 통해 기회를 만들어 드리는</p>
           <div className={styles.titleSecondRow}>
-            <img src={puffu} alt="푸푸" />
+            <img src={puffu} alt="푸푸" className={styles.puffu} />
             <p className={styles.title}>와 함께하세요</p>
           </div>
         </div>

@@ -79,7 +79,7 @@ const Section14 = forwardRef((props, ref) => {
               문의하기
             </button>
           </form>
-          <img src={puffuCircle} alt="푸푸 원 모양 로고" />
+          <img src={puffuCircle} alt="푸푸 원 모양 로고" className={styles.puffuCircle} />
         </div>
       </div>
     </div>

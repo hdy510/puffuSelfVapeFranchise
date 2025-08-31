@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import NaverMapScriptLoader from "./components/NaverMapScriptLoader";
 import Header from './components/Header';
 import Section1 from './components/Section1';
@@ -20,6 +20,7 @@ import Section16 from './components/Section16';
 import Section17 from './components/Section17';
 import Footer from './components/Footer';
 import TopBtn from './components/TopBtn';
+import PopUp from './components/PopUp';
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
   const section10Ref = useRef(null);
   const section13Ref = useRef(null);
   const section14Ref = useRef(null);
+  // 팝업 상태
+  const [ isPopUpOpen, setIsPopUpOpen ] = useState(true);
 
   return (
     <>
@@ -58,6 +61,8 @@ function App() {
       <Section17 />
       <Footer />
       <TopBtn />
+      
+      {isPopUpOpen && <PopUp onClose={() => setIsPopUpOpen(false)} />}
     </>
   );
 }

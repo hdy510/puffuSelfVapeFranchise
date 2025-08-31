@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useResponsive } from "../utils/useResponsive";
 import styles from "./Section15.module.scss";
 import daeheung from "../resources/daeheung.png";
 import jeonjujeonbukdae from "../resources/jeonjujeonbukdae.png";
@@ -8,6 +9,7 @@ import mapPostalCode from "../resources/mapPostalCode.png";
 import mapPhone from "../resources/mapPhone.png";
 
 function Section15() {
+  const { isMobile, isLargeMobile, isTabletAndDesktop } = useResponsive();
   const stores = [
     {
       img: daeheung,
@@ -29,8 +31,6 @@ function Section15() {
       postalCode: "54898",
       tel: "0507-1334-2193"
     },
-
-    
 
 
   ];
@@ -91,11 +91,14 @@ function Section15() {
         <div className={styles.titleBox}>
           <h2 className={styles.title}>실제 운영중인 매장을 지도에서 찾아보세요</h2>
         </div>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div className={styles.contentsWrap}>
           <div className={styles.storeList}
             style={{ 
-              width: stores.length >= 3 ? "43%" : "42.2%",
-              padding: stores.length >= 3 ? "1.5rem 1rem 1.5rem 1.5rem" : "1.5rem"
+              padding: isTabletAndDesktop ? (
+                stores.length >= 3 ? "1.5rem 1rem 1.5rem 1.5rem" : "1.5rem"
+              ) : (
+                stores.length >= 2 ? "1rem 0.5rem 1rem 1rem" : "1rem"
+              )
             }}
           >
             <div className={styles.scrollWrap}>
@@ -134,10 +137,7 @@ function Section15() {
               ))}
             </div>
           </div>
-          <div
-            ref={mapRef}
-            style={{ width: "52%", height: "34.25rem", borderRadius: "0.625rem" }}
-          />
+          <div ref={mapRef} className={styles.map} />
         </div>
       </div>
     </div>

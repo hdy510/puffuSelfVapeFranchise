@@ -53,8 +53,8 @@ function App() {
       <Section12 />
       <Section13 ref={section13Ref} />
       <Section14 ref={section14Ref} />
-      {/*<Section15 />
-      <Section16 />
+      <Section15 />
+      {/*<Section16 />
       <Section17 />
       <Footer />
       <TopBtn /> */}

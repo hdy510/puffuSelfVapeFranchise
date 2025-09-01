@@ -40,28 +40,28 @@ function Section15() {
   useEffect(() => {
     if (!mapRef.current) return;
   
-    const onLoadKakaoMap = () => {
-      const center = new window.kakao.maps.LatLng(36.3275, 127.4275);
-      const mapInstance = new window.kakao.maps.Map(mapRef.current, {
-        center,
-        level: 4,
-      });
-      setMap(mapInstance);
-  
-      // 마커 생성
-      stores.forEach((store) => {
-        new window.kakao.maps.Marker({
-          position: new window.kakao.maps.LatLng(store.lat, store.lng),
-          map: mapInstance,
-          title: store.name,
+    const interval = setInterval(() => {
+      if (window.kakao && window.kakao.maps) {
+        clearInterval(interval);
+        const center = new window.kakao.maps.LatLng(36.3275, 127.4275);
+        const mapInstance = new window.kakao.maps.Map(mapRef.current, {
+          center,
+          level: 4,
         });
-      });
-    };
+        setMap(mapInstance);
   
-    if (window.kakao && window.kakao.maps) {
-      // window.kakao.maps.load(onLoadKakaoMap);
-      onLoadKakaoMap();
-    }
+        // 마커 생성
+        stores.forEach((store) => {
+          new window.kakao.maps.Marker({
+            position: new window.kakao.maps.LatLng(store.lat, store.lng),
+            map: mapInstance,
+            title: store.name,
+          });
+        });
+      }
+    }, 300);
+  
+    return () => clearInterval(interval);
   }, []);
   
 

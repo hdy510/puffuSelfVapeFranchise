@@ -19,7 +19,7 @@ function Section15() {
       lat: 36.3275,
       lng: 127.4275,
       postalCode: "34914",
-      tel: "0507-1445-2143"
+      tel: "0507-1445-2143",
     },
     {
       img: jeonjujeonbukdae,
@@ -29,10 +29,8 @@ function Section15() {
       lat: 35.8467,
       lng: 127.1295,
       postalCode: "54898",
-      tel: "0507-1334-2193"
+      tel: "0507-1334-2193",
     },
-
-
   ];
 
   const mapRef = useRef(null);
@@ -41,48 +39,42 @@ function Section15() {
 
   useEffect(() => {
     if (!mapRef.current) return;
-
-    // 네이버 맵 스크립트 로드 대기
-    const interval = setInterval(() => {
-      if (window.naver && window.naver.maps) {
-        console.log("✅ Naver Maps available, initializing...");
-
-        const mapInstance = new window.naver.maps.Map(mapRef.current, {
-          center: new window.naver.maps.LatLng(36.3275, 127.4275),
-          zoom: 15,
+  
+    const onLoadKakaoMap = () => {
+      const center = new window.kakao.maps.LatLng(36.3275, 127.4275);
+      const mapInstance = new window.kakao.maps.Map(mapRef.current, {
+        center,
+        level: 4,
+      });
+      setMap(mapInstance);
+  
+      // 마커 생성
+      stores.forEach((store) => {
+        new window.kakao.maps.Marker({
+          position: new window.kakao.maps.LatLng(store.lat, store.lng),
+          map: mapInstance,
+          title: store.name,
         });
-        setMap(mapInstance);
-
-        // 매장 마커 표시
-        stores.forEach((store) => {
-          new window.naver.maps.Marker({
-            position: new window.naver.maps.LatLng(store.lat, store.lng),
-            map: mapInstance,
-            title: store.name,
-          });
-        });
-
-        clearInterval(interval); // 로드 성공하면 반복 종료
-      }
-    }, 300);
-
-    return () => clearInterval(interval);
+      });
+    };
+  
+    if (window.kakao && window.kakao.maps) {
+      // window.kakao.maps.load(onLoadKakaoMap);
+      onLoadKakaoMap();
+    }
   }, []);
+  
 
-  // 특정 매장 포커싱 함수
+  // 특정 매장 포커싱
   const focusStore = (index) => {
-    if (!map || !window.naver || !window.naver.maps) {
-      console.warn("⚠️ Naver Maps is not ready yet");
+    if (!map || !window.kakao || !window.kakao.maps) {
+      console.warn("⚠️ Kakao Maps is not ready yet");
       return;
     }
     const store = stores[index];
-    if (!store.lat || !store.lng) {
-      console.error("⚠️ Store has no coordinates", store);
-      return;
-    }
-    const position = new window.naver.maps.LatLng(store.lat, store.lng);
+    const position = new window.kakao.maps.LatLng(store.lat, store.lng);
     map.setCenter(position);
-    map.setZoom(17);
+    map.setLevel(3); // 더 확대
   };
 
   return (
@@ -92,13 +84,16 @@ function Section15() {
           <h2 className={styles.title}>실제 운영중인 매장을 지도에서 찾아보세요</h2>
         </div>
         <div className={styles.contentsWrap}>
-          <div className={styles.storeList}
-            style={{ 
-              padding: isTabletAndDesktop ? (
-                stores.length >= 3 ? "1.5rem 1rem 1.5rem 1.5rem" : "1.5rem"
-              ) : (
-                stores.length >= 2 ? "1rem 0.5rem 1rem 1rem" : "1rem"
-              )
+          <div
+            className={styles.storeList}
+            style={{
+              padding: isTabletAndDesktop
+                ? stores.length >= 3
+                  ? "1.5rem 1rem 1.5rem 1.5rem"
+                  : "1.5rem"
+                : stores.length >= 2
+                ? "1rem 0.5rem 1rem 1rem"
+                : "1rem",
             }}
           >
             <div className={styles.scrollWrap}>
@@ -106,14 +101,22 @@ function Section15() {
                 <div
                   key={idx}
                   className={styles.storeBox}
-                  style={{ 
-                    borderBottom : idx === stores.length - 1 ? "none" : "0.063rem solid #E5E5E5",
+                  style={{
+                    borderBottom:
+                      idx === stores.length - 1
+                        ? "none"
+                        : "0.063rem solid #E5E5E5",
                     paddingTop: idx === 0 ? "0" : "1rem",
-                    paddingBottom: idx === stores.length - 1 ? "0" : "1rem"
-                   }}
+                    paddingBottom:
+                      idx === stores.length - 1 ? "0" : "1rem",
+                  }}
                   onClick={() => focusStore(idx)}
                 >
-                  <img src={store.img} alt="매장 이미지" className={styles.storeImg} />
+                  <img
+                    src={store.img}
+                    alt="매장 이미지"
+                    className={styles.storeImg}
+                  />
                   <div className={styles.storeInfoBox}>
                     <h4 className={styles.heading4}>{store.name}</h4>
                     <div className={styles.storeInfoDetail}>
